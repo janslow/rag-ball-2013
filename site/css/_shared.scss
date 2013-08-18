@@ -1,18 +1,19 @@
 $beige: #ede5bc;
 $background-blue: #232565;
 
-$window-width: 920px;
-$window-height: 600px;
-
 $frame-width: 960px;
-$frame-height: 700px;
+$frame-height: 750px;
 
 $menu-height: 50px;
+$menu-item-count: 4;
 
 $frame-top-height: 50px;
 $frame-bottom-height: 50px;
 $frame-side-width: 20px;
 
-$frame-top: 35px;
+$window-width: $frame-width - (2 * $frame-side-width);
+$window-height: $frame-height - $frame-top-height - $menu-height - $frame-bottom-height;
+
+$frame-top: 20px;
 $window-top: $frame-top + $frame-top-height;
 $window-bottom: $window-top + $window-height;
