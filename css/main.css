@@ -1,9 +1,9 @@
 @import url(reset.css);
 .frame {
   z-index: 1500;
-  top: 20px;
-  width: 960px;
-  height: 750px; }
+  top: 10px;
+  bottom: 40px;
+  min-height: 250px; }
   .frame > * {
     position: absolute; }
   .frame .top {
@@ -11,40 +11,40 @@
     top: 0; }
     .frame .top.left {
       width: 72px;
-      right: 960px;
-      background-image: url(../img/window-top-left.png); }
+      left: -72px;
+      background-image: url(../img/frame-top-left.png); }
     .frame .top.center {
-      background-image: url(../img/window-top.png); }
+      background-image: url(../img/frame-top.png); }
     .frame .top.right {
       width: 72px;
-      left: 960px;
-      background-image: url(../img/window-top-right.png); }
+      right: -72px;
+      background-image: url(../img/frame-top-right.png); }
   .frame .side {
-    height: 640px;
     width: 20px;
-    top: 55px; }
+    top: 55px;
+    bottom: 55px; }
     .frame .side.right {
-      background-image: url(../img/window-right.png);
+      background-image: url(../img/frame-right.png);
       right: 0; }
     .frame .side.left {
-      background-image: url(../img/window-left.png);
+      background-image: url(../img/frame-left.png);
       left: 0; }
   .frame .bottom {
     height: 50px;
     bottom: 0; }
     .frame .bottom.left {
       width: 59px;
-      right: 960px;
-      background-image: url(../img/window-bottom-left.png); }
+      left: -59px;
+      background-image: url(../img/frame-bottom-left.png); }
     .frame .bottom.center {
-      background-image: url(../img/window-bottom.png); }
+      background-image: url(../img/frame-bottom.png); }
     .frame .bottom.right {
       width: 59px;
-      left: 960px;
-      background-image: url(../img/window-bottom-right.png); }
+      right: -59px;
+      background-image: url(../img/frame-bottom-right.png); }
   .frame .center {
     background-repeat: repeat-x;
-    width: 960px; }
+    width: 100%; }
 
 .frame .menu {
   background: #232565;
@@ -61,7 +61,6 @@
     display: inline; }
   .frame .menu a {
     display: block;
-    width: 198px;
     margin: 5px;
     padding: 10px;
     float: left;
@@ -96,6 +95,19 @@
     text-align: right;
     margin-right: 20px; }
 
+/* NOTE
+ * Rules in this file are rules which change based on runtime 
+ * variables (such as window width)
+ * They should also be set in a JavaScript file (e.g., resize.js)
+ */
+.frame {
+  width: 960px; }
+  .frame .menu a {
+    width: 198px; }
+
+.sky, .content {
+  width: 920px; }
+
 body {
   font-family: Helvetica; }
 
@@ -109,11 +121,10 @@ body {
   margin-right: auto; }
 
 .sky, .content {
-  top: 70px;
-  width: 920px; }
+  top: 60px; }
 
 .sky {
-  height: 600px; }
+  bottom: 140px; }
 
 .background *, .sky {
   background-color: #232565; }
@@ -124,14 +135,15 @@ body {
 .background .top {
   z-index: 1000;
   top: 0;
-  height: 70px; }
+  height: 10px; }
 .background .bottom {
   z-index: 1000;
-  top: 670px;
+  height: 40px;
   bottom: 0; }
 
 .fake-body {
-  height: 10000px; }
+  height: 10000px;
+  width: 0; }
 
 .footer {
   background: #232565;
