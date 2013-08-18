@@ -1,6 +1,6 @@
 @import "_shared.scss";
 .frame {
-  z-index: 9500;
+  z-index: 1500;
   top: $frame-top;
   width: $frame-width;
   height: $frame-height;
@@ -75,7 +75,7 @@
   height: $menu-height;
   left: $frame-side-width;
   right: $frame-side-width;
-  z-index: 9400;
+  z-index: 1400;
 
   ul {
     list-style-type: none;

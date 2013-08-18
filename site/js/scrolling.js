@@ -1,22 +1,12 @@
-$(function() {
-  contentOffset = $('.sky').position().top;
-
-  $(window).scroll(function(e) {
-    var progress = $(window).scrollTop();
-    updateGradient(progress / 40);
-    updateContent(progress);
-  }).scroll();
-});
-
-var contentOffset = 0;
+var contentOffset;
 var colours = ["#ecf4f8", "#e3eef5", "#b0d0e3", "#6cacca", "#328fb1", "#2b7aa3", "#29719c", "#276693", "#25618e", "#235987", "#21507e", "#1e4471", "#1c3c66", "#193259"];
 var colourPercents = [0, 2, 9, 14, 18, 24, 27, 31, 34, 39, 47, 59, 70, 84];
 
 function updateGradient(progress) {
   if (progress < 0)
     progress = 0;
-  gradientBuilder = [];
-  
+  var gradientBuilder = [];
+
   var current = 0;
   var skyHeight = $('.sky').height();
 
@@ -28,11 +18,11 @@ function updateGradient(progress) {
       gradientBuilder.push(" ");
       gradientBuilder.push(current);
       gradientBuilder.push("%");
-    if (current < 0)
-      break;
+      if (current < 0)
+        break;
     }
   }
-  if (gradientBuilder.length == 5)
+  if (gradientBuilder.length === 5)
     $('.sky').css({
       backgroundColor: gradientBuilder[1],
       backgroundImage: "inherit"
@@ -47,8 +37,19 @@ function updateGradient(progress) {
     });
   }
 }
+
 function updateContent(progress) {
   $('.content').css({
     top: contentOffset - progress
   });
 }
+
+$(function () {
+  contentOffset = $('.sky').position().top;
+
+  $(window).scroll(function (e) {
+    var progress = $(window).scrollTop();
+    updateGradient(progress / 40);
+    updateContent(progress);
+  }).scroll();
+});

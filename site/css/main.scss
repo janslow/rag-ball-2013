@@ -1,12 +1,12 @@
 @import "_shared.scss";
 @import "_frame.scss";
 @import "_content.scss";
-@import "_reset.css";
+@import "reset.css";
 
 body {
   font-family: Helvetica;
 }
-.sky, .background > *, .frame, .content {
+.sky, .background > *, .frame, .content, .footer {
   position: fixed;
   left: 0;
   right: 0;
@@ -31,16 +31,32 @@ body {
     bottom: 0;
   }
   .top {
-    z-index: 9000;
+    z-index: 1000;
     top: 0;
     height: $window-top;
   }
   .bottom {
-    z-index: 9000;
+    z-index: 1000;
     top: $window-bottom;
     bottom: 0;
   }
 }
 .fake-body {
   height: 10000px;
+}
+.footer {
+  background: $background-blue;
+  color: $beige;
+  bottom: 0;
+  margin: auto 0 0 auto;
+  padding: 5px 10px 5px 5px;
+  width: 400px;
+  z-index: 1999;
+  text-align: right;
+  border-top-left-radius: 5px;
+  font-size: 12px;
+
+  a, a:visited {
+    color: $beige;
+  }
 }
