@@ -1,0 +1,18 @@
+$beige: #ede5bc;
+$background-blue: #232565;
+
+$window-width: 920px;
+$window-height: 600px;
+
+$frame-width: 960px;
+$frame-height: 700px;
+
+$menu-height: 50px;
+
+$frame-top-height: 50px;
+$frame-bottom-height: 50px;
+$frame-side-width: 20px;
+
+$frame-top: 35px;
+$window-top: $frame-top + $frame-top-height;
+$window-bottom: $window-top + $window-height;

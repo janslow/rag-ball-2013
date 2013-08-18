@@ -1,0 +1,61 @@
+@import "_shared.scss";
+.frame {
+  z-index: 9500;
+  top: $frame-top;
+  width: $frame-width;
+  height: $frame-height;
+  * {
+    position: absolute;
+  }
+  .top {
+    height: $frame-top-height;
+    top: 0;
+    &.left {
+      width:72px;
+      right: $frame-width;
+      background-image: url(../img/window-top-left.png);
+    }
+    &.center {
+      background-image: url(../img/window-top.png);
+    }
+    &.right {
+      width:72px;
+      left: $frame-width;
+      background-image: url(../img/window-top-right.png);
+    }
+  }
+  .side {
+    height: $window-height - 10;
+    width: $frame-side-width;
+    top: 55px;
+    &.right {
+      background-image: url(../img/window-right.png);
+      right: 0;
+    }
+    &.left {
+      background-image: url(../img/window-left.png);
+      left: 0;
+    }
+  }
+  .bottom {
+    height: $frame-bottom-height;
+    bottom: 0;
+    &.left {
+      width:59px;
+      right: $frame-width;
+      background-image: url(../img/window-bottom-left.png);
+    }
+    &.center {
+      background-image: url(../img/window-bottom.png);
+    }
+    &.right {
+      width:59px;
+      left: $frame-width;
+      background-image: url(../img/window-bottom-right.png);
+    }
+  }
+  .center {
+    background-repeat: repeat-x;
+    width: $frame-width;
+  }
+}

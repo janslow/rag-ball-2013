@@ -1,0 +1,31 @@
+@import "_shared.scss";
+
+.title-page {
+  height: 800px;
+}
+
+.quote-page {
+  height: 700px;
+  width: 450px;
+  margin-left: auto;
+  margin-right: auto;
+
+  .line1, .line2, .line3 {
+  	color: $beige;
+  	font-size: 30px;
+  	margin-bottom: 20px;
+  }
+  .line1 {
+  	text-align: center;
+  	margin-right: 50px;
+  }
+  .line2 {
+  	text-align: right;
+  }
+  .author {
+  	color: $beige;
+  	font-size: 20px;
+  	text-align: right;
+  	margin-right: 20px;
+  }
+}
