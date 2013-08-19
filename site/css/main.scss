@@ -1,6 +1,7 @@
 @import "_shared.scss";
 @import "_frame.scss";
 @import "_content.scss";
+@import "_dynamic.scss";
 @import "reset.css";
 
 body {
@@ -16,11 +17,10 @@ body {
   margin-right: auto;
 }
 .sky, .content {
-  top: $window-top;
-  width: $window-width;
+  top: $sky-top;
 }
 .sky {
-  height: $window-height;
+  bottom: $sky-bottom;
 }
 .background *, .sky {
   background-color: $background-blue;
@@ -33,16 +33,17 @@ body {
   .top {
     z-index: 1000;
     top: 0;
-    height: $window-top;
+    height: $frame-top;
   }
   .bottom {
     z-index: 1000;
-    top: $window-bottom;
+    height: $frame-bottom;
     bottom: 0;
   }
 }
 .fake-body {
   height: 10000px;
+  width: 0;
 }
 .footer {
   background: $background-blue;

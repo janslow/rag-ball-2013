@@ -1,19 +1,16 @@
 $beige: #ede5bc;
 $background-blue: #232565;
 
-$frame-width: 960px;
-$frame-height: 750px;
-
-$menu-height: 50px;
-$menu-item-count: 4;
-
+//Dimensions of components of Window Frame
 $frame-top-height: 50px;
 $frame-bottom-height: 50px;
 $frame-side-width: 20px;
+$frame-menu-height: 50px;
 
-$window-width: $frame-width - (2 * $frame-side-width);
-$window-height: $frame-height - $frame-top-height - $menu-height - $frame-bottom-height;
+//Start and End Positions of Window Frame and Sky
+$frame-top: 10px;
+$sky-top: $frame-top + $frame-top-height;
+$frame-bottom: 40px;
+$sky-bottom: $frame-bottom + $frame-bottom-height + $frame-menu-height;
 
-$frame-top: 20px;
-$window-top: $frame-top + $frame-top-height;
-$window-bottom: $window-top + $window-height;
+$menu-item-count: 4;

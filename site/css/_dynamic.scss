@@ -1,0 +1,23 @@
+@import "_shared.scss";
+
+/* NOTE
+ * Rules in this file are rules which change based on runtime 
+ * variables (such as window width)
+ * They should also be set in a JavaScript file (e.g., resize.js)
+ */
+
+//Dimensions of Window Frame (dynamic)
+$frame-width: 960px;
+
+//Dimensions of Sky (dynamic)
+$sky-width: $frame-width - (2 * $frame-side-width);
+
+.frame {
+  width: $frame-width;
+  .menu a {
+    width: ($sky-width / $menu-item-count) - 32px;
+  }
+}
+.sky, .content {
+  width: $sky-width;
+}

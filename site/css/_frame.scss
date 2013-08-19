@@ -1,9 +1,13 @@
 @import "_shared.scss";
+
+$top-corner-width: 72px;
+$bottom-corner-width: 59px;
+
 .frame {
   z-index: 1500;
   top: $frame-top;
-  width: $frame-width;
-  height: $frame-height;
+  bottom: $frame-bottom;
+  min-height: 100px + $frame-top-height + $frame-bottom-height + $frame-menu-height;
   & > * {
     position: absolute;
   }
@@ -11,23 +15,23 @@
     height: $frame-top-height;
     top: 0;
     &.left {
-      width:72px;
-      right: $frame-width;
+      width:$top-corner-width;
+      left: -1 * $top-corner-width;
       background-image: url(../img/frame-top-left.png);
     }
     &.center {
       background-image: url(../img/frame-top.png);
     }
     &.right {
-      width:72px;
-      left: $frame-width;
+      width:$top-corner-width;
+      right: -1 * $top-corner-width;
       background-image: url(../img/frame-top-right.png);
     }
   }
   .side {
-    height: $frame-height - $frame-top-height - $frame-bottom-height - 10;
     width: $frame-side-width;
-    top: 55px;
+    top: $frame-top-height + 5px;
+    bottom: $frame-bottom-height + 5px;
     &.right {
       background-image: url(../img/frame-right.png);
       right: 0;
@@ -41,29 +45,29 @@
     height: $frame-bottom-height;
     bottom: 0;
     &.left {
-      width:59px;
-      right: $frame-width;
+      width: $bottom-corner-width;
+      left: -1 * $bottom-corner-width;
       background-image: url(../img/frame-bottom-left.png);
     }
     &.center {
       background-image: url(../img/frame-bottom.png);
     }
     &.right {
-      width:59px;
-      left: $frame-width;
+      width: $bottom-corner-width;
+      right: -1 * $bottom-corner-width;
       background-image: url(../img/frame-bottom-right.png);
     }
   }
   .center {
     background-repeat: repeat-x;
-    width: $frame-width;
+    width: 100%;
   }
 }
 
 .frame .menu {
   background: $background-blue;
   bottom: $frame-bottom-height;
-  height: $menu-height;
+  height: $frame-menu-height;
   left: $frame-side-width;
   right: $frame-side-width;
   z-index: 1400;
@@ -78,7 +82,6 @@
   }
   a {
     display: block;
-    width: ($window-width / $menu-item-count) - 32;
     margin: 5px;
     padding: 10px;
     float:left;
