@@ -1,18 +1,21 @@
+/*jslint indent: 2 */
+/*global $:false, window:false */
 (function () {
   "use strict";
-  var contentOffset;
-  var colours = ["#ecf4f8", "#e3eef5", "#b0d0e3", "#6cacca", "#328fb1", "#2b7aa3", "#29719c", "#276693", "#25618e", "#235987", "#21507e", "#1e4471", "#1c3c66", "#193259"];
-  var colourPercents = [0, 2, 9, 14, 18, 24, 27, 31, 34, 39, 47, 59, 70, 84];
+  var contentOffset,
+    colours = ["#ecf4f8", "#e3eef5", "#b0d0e3", "#6cacca", "#328fb1", "#2b7aa3", "#29719c", "#276693", "#25618e", "#235987", "#21507e", "#1e4471", "#1c3c66", "#193259"],
+    colourPercents = [0, 2, 9, 14, 18, 24, 27, 31, 34, 39, 47, 59, 70, 84];
 
   function updateGradient(progress) {
     if (progress < 0) {
       progress = 0;
     }
-    var gradientBuilder = [];
+    var gradientBuilder = [],
+      current = 0,
+      i,
+      gradientCSS;
 
-    var current = 0;
-
-    for (var i = 0; i < colours.length; i++) {
+    for (i = 0; i < colours.length; i += 1) {
       current = colourPercents[i] - progress;
       if (current >= 0) {
         gradientBuilder.push(", ");
@@ -32,7 +35,7 @@
       });
     } else {
       gradientBuilder.push(")");
-      var gradientCSS = gradientBuilder.join("");
+      gradientCSS = gradientBuilder.join("");
       $('.sky').css({
         backgroundImage: "-webkit-linear-gradient(bottom" + gradientCSS
       }).css({
