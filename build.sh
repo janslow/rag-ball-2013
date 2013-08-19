@@ -13,9 +13,8 @@ cp -f $SITE_DIR/css/*.css $OUTPUT_DIR/css/
 sass -f $SITE_DIR/css/main.scss $OUTPUT_DIR/css/main.css
 juicer merge --force $OUTPUT_DIR/css/main.css
 
-#Copy and Compile JavaScript
-cp -f $SITE_DIR/js/*.js $OUTPUT_DIR/js/
-juicer merge --force --skip-verification $OUTPUT_DIR/js/scrolling.js
+#Compile JavaScript
+juicer merge -fo $OUTPUT_DIR/js/application.min.js $SITE_DIR/js/scrolling.js $SITE_DIR/js/resize.js
 
 #Copy and rewrite HTML
 ./rewrite.rb $SITE_DIR/index.html $OUTPUT_DIR/index.html
