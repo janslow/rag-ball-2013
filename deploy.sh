@@ -7,9 +7,9 @@ if [ ! -d "$PUBLISH_DIR" ]; then
 	git clone git@github.com:janslow/rag-ball-2013.git -b gh-pages $PUBLISH_DIR
 fi
 
-cp -fR $BIN_DIR/ $PUBLISH_DIR/
-
 cd $PUBLISH_DIR
+rm -R *
+cp -fR ../$BIN_DIR/ .
 
 git add .
 git commit -a -m "Automated Commit"
