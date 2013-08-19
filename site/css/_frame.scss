@@ -13,15 +13,15 @@
     &.left {
       width:72px;
       right: $frame-width;
-      background-image: url(../img/window-top-left.png);
+      background-image: url(../img/frame-top-left.png);
     }
     &.center {
-      background-image: url(../img/window-top.png);
+      background-image: url(../img/frame-top.png);
     }
     &.right {
       width:72px;
       left: $frame-width;
-      background-image: url(../img/window-top-right.png);
+      background-image: url(../img/frame-top-right.png);
     }
   }
   .side {
@@ -29,11 +29,11 @@
     width: $frame-side-width;
     top: 55px;
     &.right {
-      background-image: url(../img/window-right.png);
+      background-image: url(../img/frame-right.png);
       right: 0;
     }
     &.left {
-      background-image: url(../img/window-left.png);
+      background-image: url(../img/frame-left.png);
       left: 0;
     }
   }
@@ -43,30 +43,21 @@
     &.left {
       width:59px;
       right: $frame-width;
-      background-image: url(../img/window-bottom-left.png);
+      background-image: url(../img/frame-bottom-left.png);
     }
     &.center {
-      background-image: url(../img/window-bottom.png);
+      background-image: url(../img/frame-bottom.png);
     }
     &.right {
       width:59px;
       left: $frame-width;
-      background-image: url(../img/window-bottom-right.png);
+      background-image: url(../img/frame-bottom-right.png);
     }
   }
   .center {
     background-repeat: repeat-x;
     width: $frame-width;
   }
-  // .skyline {
-  //   width: 960px;
-  //   height: 311px;
-  //   bottom: 25px;
-  //   background: {
-  //     image: url(../img/skyline.png);
-  //     repeat: no-repeat;
-  //   }
-  // }
 }
 
 .frame .menu {
