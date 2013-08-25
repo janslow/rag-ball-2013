@@ -19,5 +19,5 @@ else
 fi
 
 git add .
-git commit -a -m $COMMIT_MSG
+git commit -a -m "$COMMIT_MSG"
 git push origin gh-pages

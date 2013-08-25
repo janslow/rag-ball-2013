@@ -18,6 +18,8 @@
     $('.frame').width(frameWidth);
     $('.sky, .content').width(skyWidth);
     $('.menu a').width(itemWidth);
+
+    $(window).scroll();
   }
   $(function () {
     menuItemsCount = $('.menu li').length;
