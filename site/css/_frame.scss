@@ -5,15 +5,15 @@ $bottom-corner-width: 59px;
 
 .frame {
   z-index: 1500;
-  top: $frame-top;
-  bottom: $frame-bottom;
+  top: 0;
+  bottom: 0;
   min-height: 100px + $frame-top-height + $frame-bottom-height + $frame-menu-height;
   & > * {
     position: absolute;
   }
   .top {
     height: $frame-top-height;
-    top: 0;
+    top: $frame-top;
     &.left {
       width:$top-corner-width;
       left: -1 * $top-corner-width;
@@ -30,8 +30,8 @@ $bottom-corner-width: 59px;
   }
   .side {
     width: $frame-side-width;
-    top: $frame-top-height + 5px;
-    bottom: $frame-bottom-height + 5px;
+    top: $sky-top + 5px;
+    bottom: $sky-bottom + 5px;
     &.right {
       background-image: url(../img/frame-right.png);
       right: 0;
@@ -43,7 +43,7 @@ $bottom-corner-width: 59px;
   }
   .bottom {
     height: $frame-bottom-height;
-    bottom: 0;
+    bottom: $frame-bottom;
     &.left {
       width: $bottom-corner-width;
       left: -1 * $bottom-corner-width;
@@ -66,7 +66,7 @@ $bottom-corner-width: 59px;
 
 .frame .menu {
   background: $background-blue;
-  bottom: $frame-bottom-height;
+  bottom: $sky-bottom;
   height: $frame-menu-height;
   left: $frame-side-width;
   right: $frame-side-width;
@@ -98,5 +98,44 @@ $bottom-corner-width: 59px;
         radius: 10px;
       }
     }
+  }
+}
+
+.frame .logo {
+  left: $frame-side-width;
+  right: $frame-side-width;
+  margin-left: auto;
+  margin-right: auto;
+  
+  width: 60%;
+
+  background: {
+    repeat: no-repeat;
+    size: contain;
+    position: center center;
+  };
+
+  visibility: hidden;
+
+  &.initial, &.intermediate {
+    background-image: url(../img/logo.png);
+    z-index: 1600;
+  }
+  &.initial {
+    top: $sky-top;
+    bottom: $sky-bottom;
+    margin-top: auto;
+    margin-bottom: auto;
+
+    height: 198px;
+  }
+  &.final {
+    top: 10px;
+    bottom: auto;
+
+    height: 90px;
+
+    background-image: url(../img/logo.png);
+    z-index: 1601;
   }
 }

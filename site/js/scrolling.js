@@ -2,7 +2,7 @@
 /*global $:false, window:false */
 (function () {
   "use strict";
-  var contentOffset,
+  var contentOffset, sky, content, logo,
     colours = ["#ecf4f8", "#e3eef5", "#b0d0e3", "#6cacca", "#328fb1", "#2b7aa3", "#29719c", "#276693", "#25618e", "#235987", "#21507e", "#1e4471", "#1c3c66", "#193259"],
     colourPercents = [0, 2, 9, 14, 18, 24, 27, 31, 34, 39, 47, 59, 70, 84];
 
@@ -29,14 +29,14 @@
       }
     }
     if (gradientBuilder.length === 5) {
-      $('.sky').css({
+      sky.css({
         backgroundColor: gradientBuilder[1],
         backgroundImage: "inherit"
       });
     } else {
       gradientBuilder.push(")");
       gradientCSS = gradientBuilder.join("");
-      $('.sky').css({
+      sky.css({
         backgroundImage: "-webkit-linear-gradient(bottom" + gradientCSS
       }).css({
         backgroundImage: "linear-gradient(to top" + gradientCSS
@@ -45,18 +45,72 @@
   }
 
   function updateContent(progress) {
-    $('.content').css({
+    content.css({
       top: contentOffset - progress
     });
   }
 
+  function updateLogo(progress) {
+    var initialTop = logo.initial.position().top + parseInt(logo.initial.css('margin-top'), 10),
+      initialHeight = logo.initial.height(),
+      miniTop = logo.mini.position().top + parseInt(logo.mini.css('margin-top'), 10),
+      miniHeight = logo.mini.height(),
+      finalTopChange = miniTop - initialTop,
+      finalHeightChange = miniHeight - initialHeight,
+      resizeProgress = progress / 300,
+      fadeProgress = (progress - 300) / 100;
+      
+    if (resizeProgress <= 0) {
+      logo.initial.css({ visibility: 'visible' });
+      logo.intermediate.css({ visibility: 'hidden' });
+      logo.mini.css({ visibility: 'hidden' });
+    } else if (resizeProgress <= 1) {
+      logo.initial.css({ visibility: 'hidden' });
+      logo.intermediate.css({
+        visibility: 'visible',
+        top: initialTop + (finalTopChange * resizeProgress),
+        height: initialHeight + (finalHeightChange * resizeProgress)
+      });
+      logo.mini.css({ visibility: 'hidden' });
+    } else if (fadeProgress <= 1) {
+      if (fadeProgress < 0) {
+        fadeProgress = 0;
+      }
+      logo.initial.css({ visibility: 'hidden' });
+      logo.intermediate.css({
+        visibility: 'visible',
+        top: miniTop,
+        height: miniHeight
+      });
+      logo.mini.css({
+        visibility: 'visible',
+        opacity: fadeProgress
+      });
+    } else {
+      logo.initial.css({ visibility: 'hidden' });
+      logo.intermediate.css({ visibility: 'hidden' });
+      logo.mini.css({
+        visibility: 'visible',
+        opacity: 1
+      });
+    }
+  }
+
   $(function () {
-    contentOffset = $('.sky').position().top;
+    sky = $('body > .sky');
+    content = $('body > .content');
+    contentOffset = sky.position().top;
+    logo = {
+      initial: $('body > .frame > .logo.initial'),
+      mini: $('body > .frame > .logo.final'),
+      intermediate: $('body > .frame > .logo.intermediate')
+    };
 
     $(window).scroll(function () {
       var progress = $(window).scrollTop();
       updateGradient(progress / 40);
       updateContent(progress);
+      updateLogo(progress);
     }).scroll();
   });
 }());
