@@ -1,14 +1,14 @@
 @import url(reset.css);
 .frame {
   z-index: 1500;
-  top: 10px;
-  bottom: 40px;
+  top: 0;
+  bottom: 0;
   min-height: 250px; }
   .frame > * {
     position: absolute; }
   .frame .top {
     height: 50px;
-    top: 0; }
+    top: 10px; }
     .frame .top.left {
       width: 72px;
       left: -72px;
@@ -21,8 +21,8 @@
       background-image: url(../img/frame-top-right.png); }
   .frame .side {
     width: 20px;
-    top: 55px;
-    bottom: 55px; }
+    top: 65px;
+    bottom: 95px; }
     .frame .side.right {
       background-image: url(../img/frame-right.png);
       right: 0; }
@@ -31,7 +31,7 @@
       left: 0; }
   .frame .bottom {
     height: 50px;
-    bottom: 0; }
+    bottom: 40px; }
     .frame .bottom.left {
       width: 59px;
       left: -59px;
@@ -48,7 +48,7 @@
 
 .frame .menu {
   background: #232565;
-  bottom: 50px;
+  bottom: 90px;
   height: 50px;
   left: 20px;
   right: 20px;
@@ -71,6 +71,32 @@
     .frame .menu a:hover {
       border-color: #ede5bc;
       border-radius: 10px; }
+
+.frame .logo {
+  left: 20px;
+  right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  visibility: hidden; }
+  .frame .logo.initial, .frame .logo.intermediate {
+    background-image: url(../img/logo.png);
+    z-index: 1600; }
+  .frame .logo.initial {
+    top: 60px;
+    bottom: 90px;
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 198px; }
+  .frame .logo.final {
+    top: 10px;
+    bottom: auto;
+    height: 90px;
+    background-image: url(../img/logo.png);
+    z-index: 1601; }
 
 .title-page {
   height: 800px; }
@@ -124,7 +150,7 @@ body {
   top: 60px; }
 
 .sky {
-  bottom: 140px; }
+  bottom: 90px; }
 
 .background *, .sky {
   background-color: #232565; }
