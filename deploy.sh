@@ -11,6 +11,13 @@ cd $PUBLISH_DIR
 rm -R *
 cp -fR ../$BIN_DIR/ .
 
+if [ -n "$1" ]; then
+	COMMIT_MSG=$1
+else
+	COMMIT_MSG="Automated Commit"
+	echo "Using default commit message"
+fi
+
 git add .
-git commit -a -m "Automated Commit"
+git commit -a -m $COMMIT_MSG
 git push origin gh-pages
