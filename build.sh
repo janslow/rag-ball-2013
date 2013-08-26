@@ -16,7 +16,7 @@ sass -f $SITE_DIR/css/main.scss $OUTPUT_DIR/css/main.css
 juicer merge -fo $OUTPUT_DIR/css/site.min.css $OUTPUT_DIR/css/main.css
 
 #Compile JavaScript
-juicer merge -fo $OUTPUT_DIR/js/application.min.js $SITE_DIR/js/scrolling.js $SITE_DIR/js/resize.js
+juicer merge -fo $OUTPUT_DIR/js/application.min.js $SITE_DIR/js/scrolling.js $SITE_DIR/js/resize.js $SITE_DIR/js/links.js
 
 #Copy and rewrite HTML
 ./rewrite.rb $SITE_DIR/index.html $OUTPUT_DIR/index.html
