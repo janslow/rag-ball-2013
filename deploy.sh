@@ -1,3 +1,4 @@
+#!/bin/sh
 BIN_DIR="bin"
 PUBLISH_DIR="gh-pages"
 USAGE_MSG="Usage: ./deploy.sh commit_message"

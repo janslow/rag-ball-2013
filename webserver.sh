@@ -1,3 +1,4 @@
+#!/bin/sh
 if [[ -d "$1" ]]; then
   (cd $1; python -m SimpleHTTPServer)
 else

@@ -1,3 +1,4 @@
+#!/bin/sh
 SITE_DIR="site"
 OUTPUT_DIR="bin"
 
