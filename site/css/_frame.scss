@@ -101,6 +101,23 @@ $bottom-corner-width: 59px;
   }
 }
 
+.frame .skyline {
+  left: $frame-side-width;
+  right: $frame-side-width;
+  margin-left: auto;
+  margin-right: auto;
+  bottom: $sky-bottom + $frame-menu-height;
+
+  height: 100px;
+  
+  background: {
+    repeat: no-repeat;
+    size: contain;
+    position: center center;
+    image: url(../img/skyline.png);
+  }
+}
+
 .frame .logo {
   left: $frame-side-width;
   right: $frame-side-width;
