@@ -72,6 +72,18 @@
       border-color: #ede5bc;
       border-radius: 10px; }
 
+.frame .skyline {
+  left: 20px;
+  right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  bottom: 140px;
+  height: 100px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  background-image: url(../img/skyline.png); }
+
 .frame .logo {
   left: 20px;
   right: 20px;
@@ -98,24 +110,24 @@
     background-image: url(../img/logo.png);
     z-index: 1601; }
 
-.title-page {
+.content .title {
   height: 800px; }
-
-.quote-page {
+.content .quote {
+  margin-top: 100px;
   height: 700px;
   width: 450px;
   margin-left: auto;
   margin-right: auto; }
-  .quote-page .line1, .quote-page .line2, .quote-page .line3 {
+  .content .quote .line1, .content .quote .line2, .content .quote .line3 {
     color: #ede5bc;
     font-size: 30px;
     margin-bottom: 20px; }
-  .quote-page .line1 {
+  .content .quote .line1 {
     text-align: center;
     margin-right: 50px; }
-  .quote-page .line2 {
+  .content .quote .line2 {
     text-align: right; }
-  .quote-page .author {
+  .content .quote .author {
     color: #ede5bc;
     font-size: 20px;
     text-align: right;
