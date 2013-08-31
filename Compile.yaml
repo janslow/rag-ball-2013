@@ -1,0 +1,19 @@
+source:
+  root: site/
+  html: index.html
+destination:
+  root: bin/
+preprocess:
+  - source:  css/main.scss
+    output: css/main.css
+copy:
+  - img/
+options:
+  css_url:          css/application.css
+  css_minified_url: css/application.min.css
+  js_url:           js/application.js
+  js_minified_url: js/application.min.js
+  js_lookup:
+    - name:       "jQuery 2.0.3"
+      file_name:  jquery-2.0.3.js
+      remote:     //ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js
