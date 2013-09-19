@@ -1,6 +1,5 @@
 name: Neverland - RAG Ball 2013
 markdown: redcarpet
 pygments: true
-safe: true
 lsi: false
 timezone: Europe/London
