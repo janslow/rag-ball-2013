@@ -1,0 +1,50 @@
+---
+layout: [simple, mobile]
+title: Committee
+committee_members:
+  - role:   President
+    name:   Selina Badiani
+    email:  president.ragball@ousu.org
+  - role:   Vice President (Experience)
+    name:   Rosie Gibson
+    email:  experience.ragball@ousu.org
+  - role:   Vice President (Logistics)
+    name:   Shyam Thakerar
+    email:  logistics.ragball@ousu.org
+  - role:   Vice President (Finance)
+    name:   Charlotte Ward
+    email:  finance.ragball@ousu.org
+  - role:   Secretary
+    name:   Ruth Meredith
+    email:  secretary.ragball@ousu.org
+  - role:   Catering Officers
+    name:   Lizzie Renard and Polly Streather
+    email:  catering.ragball@ousu.org
+  - role:   Drinks Officers
+    name:   Nichola Finch and Alex Wilson
+    email:  drinks.ragball@ousu.org
+  - role:   Entz Officers
+    name:   Alex Chalk and Josh Laban
+    email:  entz.ragball@ousu.org
+  - role:   Marketing Officers
+    name:   Katy Isaac and Charlotte Nixon
+    email:  marketing.ragball@ousu.org
+  - role:   Sponsorship Officers
+    name:   Rachel Drapper and Jodie Spencer
+    email:  sponsorship.ragball@ousu.org
+  - role:   Creative Officers
+    name:   Iman Ahmedani and Grace Wyld
+    email:  creative.ragball@ousu.org
+---
+
+<div id='committee'>
+  <ul>
+    {% for committee_member in page.committee_members %}
+      <li>
+        <div class='name'>{{ committee_member.name }}</div>
+        <div class='role'>{{ committee_member.role }}</div>
+        <div class='email'><a href='mailto:{{ committee_member.email }}'>{{ committee_member.email }}</a></div>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
