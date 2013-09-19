@@ -1,11 +1,15 @@
-@import "_shared.scss";
-@import "_frame.scss";
-@import "_content.scss";
-@import "_dynamic.scss";
+@import "_colours.scss";
 @import "_reset.scss";
+@import "window/_shared.scss";
+@import "window/_frame.scss";
+@import "window/_content.scss";
+@import "window/_dynamic.scss";
 
-body {
-  font-family: Helvetica;
+html {
+  font: {
+    family: Helvetica;
+    size: 12px;
+  }
 }
 .sky, .background > *, .frame, .content, .footer {
   position: fixed;
@@ -47,17 +51,38 @@ body {
 }
 .footer {
   background: $background-blue;
-  color: $beige;
   bottom: 0;
   margin: auto 0 0 auto;
   padding: 5px 10px 5px 5px;
-  width: 400px;
+  width: 460px;
   z-index: 1999;
   text-align: right;
   border-top-left-radius: 5px;
-  font-size: 12px;
 
-  a, a:visited {
+  ul {
+    font-size: 0;
+  }
+  li {
+    display: inline;
+
+    &:not(:last-child) {
+      border-right: 1px solid $beige;
+    }
+  }
+
+  a {
+    display: inline-block;
+    padding: 2px 4px;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  a, a:visited, li {
     color: $beige;
+    font-size: 1rem;
+  }
+
+  .full {
+    display: none;
   }
 }
