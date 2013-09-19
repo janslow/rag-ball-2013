@@ -1,0 +1,257 @@
+body, html
+{
+	margin: 0px;
+	padding: 0px;
+	background: #e9b285 url('./images/bg.jpg') repeat center top;
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	font-size: 0.95em; /* 14px/16=0.875em */
+	color: #222222;
+	min-width: 1024px;
+}
+
+@font-face{
+		font-family: 'ARBkyRAG';
+		src: url('./fonts/arberkley.eot');
+		src: url('./fonts/arberkley.eot?#iefix') format('embedded-opentype'),
+				 url('./fonts/arberkley.woff') format('woff'),
+				 url('./fonts/arberkley.ttf') format('truetype'),
+				 url('./fonts/arberkley.svg#arberkley') format('svg');
+		font-weight: normal;
+		font-style: normal;
+}
+		
+@font-face {
+		font-family: 'CalRAG';
+		src: url('./fonts/caliph.eot');
+		src: url('./fonts/caliph.eot?#iefix') format('embedded-opentype'),
+				 url('./fonts/caliph.woff') format('woff'),
+				 url('./fonts/caliph.ttf') format('truetype'),
+				 url('./fonts/caliph.svg#caliph') format('svg');
+		font-weight: normal;
+		font-style: normal;
+}
+
+.caliph
+{
+	font-family: Caliph, CalRAG;
+	font-weight: bold;
+}
+
+.berkley
+{
+	font-family: AR BERKLEY, ARBkyRAG;
+}
+
+.dark_p
+{
+	color: #800033;
+}
+
+.light_p
+{
+	color: #d40055;
+}
+
+.reg
+{
+	font-size: 1.55em;
+}
+
+.large
+{
+	font-size: 2.5em
+}
+
+.m_large
+{
+	font-size: 1.8em;
+}
+
+.m_reg
+{
+	font-size: 1.4em;
+}
+
+.main_font
+{
+	font-size: 1.2em;
+}
+
+a img
+{
+	border: none;
+}
+
+h1
+{
+	color: #75002f;
+	margin-bottom: 0px;
+	font-size: 2.65em;
+	margin-top: 10px;
+}
+
+h2
+{
+	color: #aa0044;
+	margin-bottom: 0px;
+	font-size: 2em;
+	margin-top: 10px;
+}
+
+a
+{
+	color: #75002f;
+}
+
+p
+{
+	text-align: justify;
+}
+
+.centre
+{
+	text-align: center;
+}
+
+.divider
+{
+	width: 70%;
+	height: 5px;
+	border-top: 2px dotted #d40055;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#container
+{
+	width: 90%;
+	height: auto;
+	max-width: 1200px;
+	min-width: 1024px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: -10px;
+}
+
+#container .clear_float
+{
+   display: block;
+   height: 0;
+   clear: both;
+   visibility: hidden;
+}
+
+.menu
+{
+	width: 90%;
+	height: 50px;
+	line-height: 50px;
+	max-width: 1200px;
+	min-width: 1024px;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+	padding-top: 20px;
+}
+
+.menu a
+{
+	margin-right: 13px;
+	margin-left: 13px;
+	color: #75002f;
+	text-decoration: none;
+	font-size: 1.8em;
+}
+
+.menu a.selected
+{
+	color: #aa0044;
+	text-decoration: underline;
+}
+
+#container .book_1
+{
+	width: 100%;
+	height: 780px;
+	float: left;
+	background: transparent url('./images/books/1.png') no-repeat center top;
+	background-size: 100%;
+}
+#container .book_2
+{
+	width: 100%;
+	height: 780px;
+	float: left;
+	background: transparent url('./images/books/2.png') no-repeat center top;
+	background-size: 100%;
+}
+#container .book_3
+{
+	width: 100%;
+	height: 780px;
+	float: left;
+	background: transparent url('./images/books/3.png') no-repeat center top;
+	background-size: 100%;
+}
+#container .book_4
+{
+	width: 100%;
+	height: 780px;
+	float: left;
+	background: transparent url('./images/books/4.png') no-repeat center top;
+	background-size: 100%;
+}
+#container .book_5
+{
+	width: 100%;
+	height: 780px;
+	float: left;
+	background: transparent url('./images/books/5.png') no-repeat center top;
+	background-size: 100%;
+}
+#container .book_6
+{
+	width: 100%;
+	height: 780px;
+	float: left;
+	background: transparent url('./images/books/6.png') no-repeat center top;
+	background-size: 100%;
+}
+#container .book_7
+{
+	width: 100%;
+	height: 780px;
+	float: left;
+	background: transparent url('./images/books/7.png') no-repeat center top;
+	background-size: 100%;
+}
+
+.page_left
+{
+	width: 36%;/*38.5*/
+	height: 665px;
+	margin: 50px 2.5% 0 11.5%;
+	text-align: justify;
+	overflow: hidden;
+	float: left;
+}
+
+.page_right
+{
+	width: 35%;/*38.5*/
+	height: 665px;
+	margin: 50px 13% 0 2%;
+	text-align: justify;
+	overflow: hidden;
+	float: left;
+}
+
+.footer
+{
+	width: 95%;
+	height: auto;
+	margin: 0px 2.5% 0px 2.5%;
+	text-align: right;
+	float: left;
+	font-size: 0.8em;
+}
