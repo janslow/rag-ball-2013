@@ -1,0 +1,36 @@
+@import "_colours.scss";
+@import "_reset.scss";
+
+html, body, table, tbody, tr, td {
+  height: 100%;
+  width: 100%;
+}
+table {
+  padding-bottom: 20%;
+}
+.middle {
+  vertical-align: middle;
+}
+.content {
+  margin: auto 0;
+}
+.logo, .notice {
+  margin: 0 auto;
+}
+.logo {
+  width: 640px;
+  height: 265px;
+  max-height: 80%;
+  max-width: 80%;
+
+  background: {
+    repeat: no-repeat;
+    size: contain;
+    position: center center;
+    image: url(../img/logo.png);
+  };
+}
+.notice {
+  text-align: center;
+  font-size: 2rem;
+}
