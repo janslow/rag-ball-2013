@@ -1,0 +1,63 @@
+@import "_colours.scss";
+@import "_reset.scss";
+@import "simple/_committee.scss";
+
+body {
+  padding: 0 20px;
+  width: 920px;
+}
+a {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+.menu, .footer {
+
+  font-size: 0;
+  
+  li {
+    display: inline;
+  }
+
+  a {
+    display: inline-block;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  a, a:visited, li {
+    font-size: 1em;
+  }
+}
+
+.menu {
+  margin: 20px 0;
+  li {
+    font-size: 1.2rem;
+  }
+  a {
+    width: 131px;
+
+    text-align: center;
+  }
+}
+.footer {
+  margin-top: 20px;
+
+  text-align: right;
+  li {
+    font-size: 0.75rem;
+
+    &:not(:last-child) {
+      border-right: 1px solid $beige;
+    }
+
+    a {
+      padding: 2px 4px;
+    }
+  }
+}

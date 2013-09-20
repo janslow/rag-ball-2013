@@ -1,0 +1,30 @@
+#committee {
+  ul {
+    font-size: 0;
+  }
+  li {
+    display: inline-block;
+    width: 260px;
+    padding: 10px;
+    margin: 10px;
+
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .name {
+    color: $green;
+    font-size: 1.5rem;
+    height: 3rem;
+    vertical-align: middle;
+  }
+
+  .role {
+    margin-top: 3px;
+  }
+
+  .email {
+    margin-top: 3px;
+    font-size: 0.8rem;
+  }
+}

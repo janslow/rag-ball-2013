@@ -8,7 +8,7 @@
 html {
   font: {
     family: Helvetica;
-    size: 12px;
+    size: 16px;
   }
 }
 .sky, .background > *, .frame, .content, .footer {
@@ -54,14 +54,13 @@ html {
   bottom: 0;
   margin: auto 0 0 auto;
   padding: 5px 10px 5px 5px;
-  width: 460px;
+  width: 30rem;
   z-index: 1999;
   text-align: right;
   border-top-left-radius: 5px;
 
-  ul {
-    font-size: 0;
-  }
+  font-size: 0;
+  
   li {
     display: inline;
 
@@ -79,10 +78,6 @@ html {
   }
   a, a:visited, li {
     color: $beige;
-    font-size: 1rem;
-  }
-
-  .full {
-    display: none;
+    font-size: 0.75rem;
   }
 }
