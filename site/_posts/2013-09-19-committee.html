@@ -40,10 +40,12 @@ committee_members:
 <div id='committee'>
   <ul>
     {% for committee_member in page.committee_members %}
-      <li>
+      <li class='member'>
         <div class='name'>{{ committee_member.name }}</div>
         <div class='role'>{{ committee_member.role }}</div>
-        <div class='email'><a href='mailto:{{ committee_member.email }}'>{{ committee_member.email }}</a></div>
+        <div class='email'>
+          <a href='mailto:{{ committee_member.email }}'>{{ committee_member.email }}</a>
+        </div>
       </li>
     {% endfor %}
   </ul>
