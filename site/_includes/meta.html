@@ -1,0 +1,28 @@
+<meta name='description' content='{{ site.description }}' />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta charset="utf-8" >
+
+<!-- IE Meta -->
+<meta http-equiv="msthemecompatible" content="no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+{% if site.google %}
+  <!-- Google+ -->
+  <link rel="author" href="{{ site.google.profile_url }}?rel=author" />
+  {% if site.google.organisation %}
+    <link rel="publisher" href="{{ site.google.profile_url }}" />
+  {% endif %}
+{% endif %}
+
+<!-- Facebook OpenGraph -->
+<meta property="og:title" content="{{ site.name }}" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="{{ site.description }}" />
+<meta property="og:image" content="{{ site.host }}/img/fb-logo.jpg" />
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:url" content="{{ site.host }}/" />
+<meta name="twitter:title" content="{{ site.name }}" />
+<meta name="twitter:description" content="{{ site.description }}" />
+<meta name="twitter:image" content="{{ site.host }}/img/twitter-logo.jpg" />

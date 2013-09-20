@@ -1,0 +1,13 @@
+<ul class='menu'>
+  <li><a href='{{ include.root }}/home'>Home</a></li>
+  <li><a href='{{ include.root }}/committee'>Tickets</a></li>
+  <li><a href='{{ include.root }}/committee'>Food &amp; Drink</a></li>
+  <li><a href='{{ include.root }}/committee'>Entertainment</a></li>
+  <li><a href='{{ include.root }}/committee'>Sponsors</a></li>
+  <li><a href='{{ include.root }}/committee'>Committee</a></li>
+  <li><a href='{{ include.root }}/committee'>Charities</a></li>
+  {% if mode == 'mobile' %}
+    <li><a href='{{ include.root }}/cookies'>Charities</a></li>
+    <li>{% include copyright.html %}</li>
+  {% endif %}
+</ul>

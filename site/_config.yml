@@ -1,5 +1,11 @@
-name: Neverland - RAG Ball 2013
 markdown: redcarpet
-pygments: true
+pygments: false
 lsi: false
 timezone: Europe/London
+
+google:
+  profile_url: https://plus.google.com/113578026960133800736
+  organisation: true
+
+name: RAG Ball 2013
+description:  "On November 23rd, let time stand still as you leave Oxford behind, and come away with to Neverland with RAG Ball 2013!"

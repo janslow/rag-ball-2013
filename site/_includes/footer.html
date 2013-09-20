@@ -1,10 +1,14 @@
-<div class='footer'>
-  <ul>
-    <li class='full'><a href='/'>Full Site</a></li>
+<ul class='footer'>
+  {% if include.mode == 'window' %}
     <li class='simple'><a href='/simple/home'>Not Displaying Correctly?</a></li>
-    <li class='mobile'><a href='/mobile/home'>Mobile</a></li>
-    <li class='cookies'><a href='/simple/cookies'>Cookies</a></li>
-    <li class='contact'><a href='/simple/committee'>Contact</a></li>
-    <li class='copyright'><a>Copyright Jay Anslow 2013</a></li>
-  </ul>
-</div>
+  {% else %}
+    <li class='full'><a href='/'>Full Site</a></li>
+  {% endif %}
+
+  <li class='mobile'><a href='/mobile/home'>Mobile Site</a></li>
+
+  <li class='cookies'><a href='/simple/cookies'>Cookies</a></li>
+  <li class='contact'><a href='/simple/committee'>Contact</a></li>
+
+  <li class='copyright'>{% include copyright.html %}</li>
+</ul>

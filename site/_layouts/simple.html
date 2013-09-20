@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <link rel="stylesheet" type="text/css" href="/css/simple.css">
+
+  {% include meta.html %}
   <title>{{ page.title }} - {{ site.name }}</title>
-  <meta name="viewport" content="width=device-width">
 </head>
 <body>
   <div class="header">
-    <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-    <a class="extra" href="/">home</a>
+    <h1 class="title"><a href="/simple/home">{{ site.name }}</a></h1>
+
+    {% include menu.html root='/simple' mode='simple' %}
   </div>
 
   <h2>{{ page.title }}</h2>
@@ -18,6 +19,6 @@
     {{ content }}
   </div>
 
-  {{ footer }}
+  {% include footer.html mode='simple' %}
 </body>
 </html>
