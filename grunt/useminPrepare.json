@@ -1,0 +1,6 @@
+{
+  "options": {
+    "dest": "<%= site.release %>"
+  },
+  "release": ["<%= site.staging %>/**/*.html"]
+}

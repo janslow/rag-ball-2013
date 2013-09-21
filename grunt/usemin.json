@@ -1,0 +1,7 @@
+{
+  "options": {
+    "dirs": ["js", "css"],
+    "type": "html"
+  },
+  "release": ["<%= site.release %>/**/*.html"]
+}

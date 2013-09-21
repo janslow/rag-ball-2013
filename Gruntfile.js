@@ -27,6 +27,10 @@ module.exports = function (grunt) {
     // Deploy release to gh-pages branch
     'gh-pages': grunt.file.readJSON('grunt/gh-pages.json'),
 
+    // Update HTML files with minified links
+    usemin: grunt.file.readJSON('grunt/usemin.json'),
+    'useminPrepare': grunt.file.readJSON('grunt/useminPrepare.json'),
+
     //Clean destination directories
     clean: {
       debug: ['<%= site.debug %>'],
@@ -41,6 +45,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-jekyll');
   grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
@@ -49,13 +54,14 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-html-validation');
   grunt.loadNpmTasks('grunt-gh-pages');
+  grunt.loadNpmTasks('grunt-usemin');
 
-  grunt.registerTask('minify', ['cssmin', 'uglify', 'htmlmin', 'imagemin']);
-  grunt.registerTask('lint:staging', ['csslint:staging','jshint:staging', 'validation:staging']);
+  grunt.registerTask('minify', ['useminPrepare', 'concat', 'cssmin', 'uglify', 'copy:release-html', 'usemin', 'htmlmin', 'imagemin']);
+  grunt.registerTask('lint:staging', ['jshint:staging', 'validation:staging']);
   
   grunt.registerTask('debug', ['clean:debug', 'jekyll:serve']);
   grunt.registerTask('stage', ['clean:css', 'sass', 'clean:staging', 'jekyll:stage', 'lint:staging']);
-  grunt.registerTask('release', ['stage', 'clean:release', 'copy:releasemisc', 'minify']);
+  grunt.registerTask('release', ['stage', 'clean:release', 'copy:release-misc', 'minify']);
   grunt.registerTask('deploy', ['gh-pages:deploy']);
   
   grunt.registerTask('default', ['release']);

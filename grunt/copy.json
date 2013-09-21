@@ -1,8 +1,14 @@
 {
-  "releasemisc": {
+  "release-misc": {
     "expand": true,
     "cwd": "<%= site.staging %>",
     "src": ["**", "!**/*.{html,css,js,png,jpg,gif}"],
+    "dest": "<%= site.release %>"
+  },
+  "release-html": {
+    "expand": true,
+    "cwd": "<%= site.staging %>",
+    "src": ["**/*.html"],
     "dest": "<%= site.release %>"
   }
 }

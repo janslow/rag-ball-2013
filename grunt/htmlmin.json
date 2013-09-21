@@ -6,7 +6,7 @@
   },
   "minify": {
     "expand": true,
-    "cwd": "<%= site.staging %>/",
+    "cwd": "<%= site.release %>/",
     "src": ["**/*.html"],
     "dest": "<%= site.release %>/",
     "ext": ".html"
