@@ -2,11 +2,16 @@
   "options": {
     "bundleExec": true
   },
-  "scss": {
-    "files": {
-      "<%= site.css %>/window.css":"<%= site.scss %>/window.scss",
-      "<%= site.css %>/simple.css":"<%= site.scss %>/simple.scss",
-      "<%= site.css %>/construction.css":"<%= site.scss %>/construction.scss"
-    }
+  "window": {
+    "src":"<%= site.scss %>/window.scss",
+    "dest":"<%= site.css %>/window.css" 
+  },
+  "simple": {
+    "src":"<%= site.scss %>/simple.scss",
+    "dest":"<%= site.css %>/simple.css"
+  },
+  "construction": {
+    "src":"<%= site.scss %>/construction.scss",
+    "dest":"<%= site.css %>/construction.css"
   }
 }

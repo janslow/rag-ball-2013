@@ -1,10 +1,19 @@
 {
-  "options": {
-    "interrupt": true
-  },
-  "scss": {
-    "files": "<%= site.scss %>/**/*.scss",
+  "scss-shared": {
+    "files": "<%= site.scss %>/_*.scss",
     "tasks": ["sass"]
+  },
+  "scss-window": {
+    "files": ["<%= site.scss %>/window.scss", "<%= site.scss %>/window/**/*.scss"],
+    "tasks": ["sass:window"]
+  },
+  "scss-simple": {
+    "files": ["<%= site.scss %>/simple.scss", "<%= site.scss %>/simple/**/*.scss"],
+    "tasks": ["sass:simple"]
+  },
+  "scss-construction": {
+    "files": ["<%= site.scss %>/construction.scss", "<%= site.scss %>/construction/**/*.scss"],
+    "tasks": ["sass:construction"]
   },
   "jekyll": {
     "files": "<%= site.jekyll %>/**/*",
