@@ -10,7 +10,9 @@
 </head>
 <body>
   <div class="header">
-    <h1 class="title"><a href="/simple/home">{{ site.name }}</a></h1>
+    <a href='/simple/home' class='logo' title='{{ site.name }}'>
+      <span>&nbsp;</span>
+    </a>
 
     {% include menu.html root='/simple' mode='simple' %}
   </div>
