@@ -125,20 +125,21 @@ $bottom-corner-width: 59px;
   right: $frame-side-width;
   margin-left: auto;
   margin-right: auto;
-  
-  width: 60%;
 
   background: {
     repeat: no-repeat;
-    size: contain;
     position: center center;
   };
 
   visibility: hidden;
 
   &.initial, &.intermediate {
-    background-image: url(../img/logo.png);
-    z-index: 1600;
+    background: {
+      image: url(../img/logo.svg);
+      size: contain;
+    }
+    z-index: 1601;
+    width: 60%;
   }
   &.initial {
     top: $sky-top;
@@ -149,12 +150,16 @@ $bottom-corner-width: 59px;
     height: 198px;
   }
   &.final {
-    top: 10px;
+    top: 2px;
     bottom: auto;
 
-    height: 90px;
+    background-size: cover;
+    
+    width: 265px;
+    height: 110px;
 
-    background-image: url(../img/logo.png);
-    z-index: 1601;
+    box-shadow: 0 0 8px 3px darken($background-blue, 10%);
+    background-image: url(../img/logo-frame.svg);
+    z-index: 1600;
   }
 }

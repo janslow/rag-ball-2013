@@ -57,7 +57,7 @@
       finalTopChange = miniTop - initialTop,
       finalHeightChange = miniHeight - initialHeight,
       resizeProgress = progress / 300,
-      fadeProgress = (progress - 300) / 100;
+      fadeProgress = (progress - 320) / 300;
       
     if (resizeProgress <= 0) {
       logo.initial.css({ visibility: 'visible' });
@@ -87,7 +87,7 @@
       });
     } else {
       logo.initial.css({ visibility: 'hidden' });
-      logo.intermediate.css({ visibility: 'hidden' });
+      logo.intermediate.css({ visibility: 'visible' });
       logo.mini.css({
         visibility: 'visible',
         opacity: 1
