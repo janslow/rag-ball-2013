@@ -1,0 +1,9 @@
+{
+  "options": {
+    "path": "temp/html-validation-status.json",
+    "reportpath": "temp/html-validation-report.json"
+  },
+  "staging": {
+    "src": "<%= site.staging %>/**/*.html"
+  }
+}

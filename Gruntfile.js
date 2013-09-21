@@ -19,6 +19,8 @@ module.exports = function (grunt) {
     // Lint and validate files
     jshint: grunt.file.readJSON('grunt/jshint.json'),
     csslint: grunt.file.readJSON('grunt/csslint.json'),
+    validation: grunt.file.readJSON('grunt/validation.json'),
+    
     // Watch for changes
     watch: grunt.file.readJSON('grunt/watch.json'),
 
@@ -42,13 +44,14 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-csslint');
   grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-html-validation');
 
   grunt.registerTask('minify', ['cssmin', 'uglify', 'htmlmin', 'imagemin']);
-  grunt.registerTask('lint', ['csslint','jshint']);
+  grunt.registerTask('lint:staging', ['csslint:staging','jshint:staging', 'validation:staging']);
   
   grunt.registerTask('debug', ['clean:debug', 'jekyll:serve']);
-  grunt.registerTask('stage', ['clean:css', 'sass', 'clean:staging', 'jekyll:stage'])
-  grunt.registerTask('release', ['stage', 'clean:release', 'minify']);
+  grunt.registerTask('stage', ['clean:css', 'sass', 'clean:staging', 'jekyll:stage', 'lint:staging']);
+  grunt.registerTask('release', ['stage', 'clean:release', 'copy:releasemisc', 'minify']);
   
   grunt.registerTask('default', ['release']);
 };
