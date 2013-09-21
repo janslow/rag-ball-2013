@@ -13,6 +13,8 @@ module.exports = function (grunt) {
     htmlmin: grunt.file.readJSON('grunt/htmlmin.json'),
     imagemin: grunt.file.readJSON('grunt/imagemin.json'),
 
+    // Copy files (which don't need minification)
+    copy: grunt.file.readJSON('grunt/copy.json'),
     // Watch for changes
     watch: grunt.file.readJSON('grunt/watch.json'),
 
@@ -33,6 +35,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
+  grunt.loadNpmTasks('grunt-contrib-copy');
 
   grunt.registerTask('minify', ['cssmin', 'uglify', 'htmlmin', 'imagemin']);
   
