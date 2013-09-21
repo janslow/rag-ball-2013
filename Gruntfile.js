@@ -24,6 +24,9 @@ module.exports = function (grunt) {
     // Watch for changes
     watch: grunt.file.readJSON('grunt/watch.json'),
 
+    // Deploy release to gh-pages branch
+    'gh-pages': grunt.file.readJSON('grunt/gh-pages.json'),
+
     //Clean destination directories
     clean: {
       debug: ['<%= site.debug %>'],
@@ -45,6 +48,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-csslint');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-html-validation');
+  grunt.loadNpmTasks('grunt-gh-pages');
 
   grunt.registerTask('minify', ['cssmin', 'uglify', 'htmlmin', 'imagemin']);
   grunt.registerTask('lint:staging', ['csslint:staging','jshint:staging', 'validation:staging']);
@@ -52,6 +56,7 @@ module.exports = function (grunt) {
   grunt.registerTask('debug', ['clean:debug', 'jekyll:serve']);
   grunt.registerTask('stage', ['clean:css', 'sass', 'clean:staging', 'jekyll:stage', 'lint:staging']);
   grunt.registerTask('release', ['stage', 'clean:release', 'copy:releasemisc', 'minify']);
+  grunt.registerTask('deploy', ['gh-pages:deploy']);
   
   grunt.registerTask('default', ['release']);
 };

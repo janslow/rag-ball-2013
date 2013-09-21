@@ -1,5 +1,4 @@
 bin/
-gh-pages/
 temp/
 
 # Dependencies (create with `bundle` and `npm install`)
