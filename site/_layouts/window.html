@@ -4,11 +4,16 @@
     <title>{{ site.name }}</title>
     {% include meta.html %}
     
-    <link rel="stylesheet" type="text/css" href="/css/window.css">
+    <!-- build:css(bin/staging) /css/window.min.css -->
+      <link rel="stylesheet" type="text/css" href="/css/window.css">
+    <!-- endbuild -->
+
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.js"></script>
-    <script src="/js/scrolling.js"></script>
-    <script src="/js/resize.js"></script>
-    <script src="/js/links.js"></script>
+    <!-- build:js(bin/staging) /js/window.min.js -->
+      <script src="/js/scrolling.js"></script>
+      <script src="/js/resize.js"></script>
+      <script src="/js/links.js"></script>
+    <!-- endbuild -->
   </head>
   <body>
     <div class='fake-body'>&nbsp;</div>
