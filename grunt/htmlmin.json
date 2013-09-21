@@ -1,0 +1,14 @@
+{
+  "options": {
+    "removeComments": true,
+    "collapseWhitespace": true,
+    "collapseBooleanAttributes": true
+  },
+  "minify": {
+    "expand": true,
+    "cwd": "<%= site.staging %>/",
+    "src": ["**/*.html"],
+    "dest": "<%= site.release %>/",
+    "ext": ".html"
+  }
+}

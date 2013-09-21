@@ -1,0 +1,12 @@
+{
+  "options": {
+    "banner": "/* Copyright <%= pkg.author %> 2013 - <%= pkg.homepage %> - v<%= pkg.version %> */"
+  },
+  "minify": {
+    "expand": true,
+    "cwd": "<%= site.staging %>/js",
+    "src": ["*.js", "!*.min.js"],
+    "dest": "<%= site.release %>/js",
+    "ext": ".min.js"
+  }
+}
