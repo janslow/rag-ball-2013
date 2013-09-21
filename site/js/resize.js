@@ -1,5 +1,4 @@
-/*jslint indent: 2 */
-/*global $:false, window:false */
+/*global $:false */
 (function () {
   "use strict";
   var menuItemsCount;
