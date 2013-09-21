@@ -1,0 +1,12 @@
+{
+  "options": {
+    "bundleExec": true
+  },
+  "scss": {
+    "files": {
+      "<%= site.css %>/window.css":"<%= site.scss %>/window.scss",
+      "<%= site.css %>/simple.css":"<%= site.scss %>/simple.scss",
+      "<%= site.css %>/construction.css":"<%= site.scss %>/construction.scss"
+    }
+  }
+}

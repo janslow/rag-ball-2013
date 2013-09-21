@@ -1,0 +1,16 @@
+{
+  "options": {
+    "interrupt": true
+  },
+  "scss": {
+    "files": "<%= site.scss %>/**/*.scss",
+    "tasks": ["sass"]
+  },
+  "jekyll": {
+    "files": "<%= site.jekyll %>/**/*",
+    "tasks": ["jekyll:build"],
+    "options": {
+      "livereload": true
+    }
+  }
+}

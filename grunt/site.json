@@ -1,0 +1,8 @@
+{
+  "jekyll": "site",
+  "scss": "scss",
+  "css": "site/css",
+  "debug": "bin/debug",
+  "staging": "bin/staging",
+  "release": "bin/release"
+}

@@ -1,0 +1,23 @@
+{
+  "options": {
+    "src": "<%= site.jekyll %>/",
+    "bundleExec": true
+  },
+  "build": {
+    "options": {
+      "dest": "<%= site.debug %>/"
+    }
+  },
+  "stage": {
+    "options": {
+      "dest": "<%= site.staging %>/"
+    }
+  },
+  "serve": {
+    "options": {
+      "dest": "<%= site.debug %>/",
+      "serve": true,
+      "port": 8000
+    }
+  }
+}
