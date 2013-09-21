@@ -107,13 +107,14 @@ $bottom-corner-width: 59px;
   right: $frame-side-width;
   margin-left: auto;
   margin-right: auto;
-  bottom: $sky-bottom + $frame-menu-height;
+  // Off by one error hack
+  bottom: $sky-bottom + $frame-menu-height - 1;
 
   height: 100px;
   
   background: {
-    repeat: no-repeat;
-    size: contain;
+    repeat: repeat-x;
+    size: cover;
     position: center center;
     image: url(../img/skyline.png);
   }
