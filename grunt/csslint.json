@@ -1,0 +1,10 @@
+{
+  "options": {
+    "ids": false,
+    "box-model": false,
+    "adjoining-classes": false
+  },
+  "staging": {
+    "src": "<%= site.staging %>/css/*.css"
+  }
+}

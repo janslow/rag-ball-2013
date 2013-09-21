@@ -1,0 +1,13 @@
+{
+  "options": {
+    "indent": 2,
+    "globals": {
+      "window":false,
+      "console":false,
+      "navigator":false
+    }
+  },
+  "staging": {
+    "src": "<%= site.staging %>/js/*.js"
+  }
+}

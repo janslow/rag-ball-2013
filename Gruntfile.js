@@ -15,6 +15,10 @@ module.exports = function (grunt) {
 
     // Copy files (which don't need minification)
     copy: grunt.file.readJSON('grunt/copy.json'),
+
+    // Lint and validate files
+    jshint: grunt.file.readJSON('grunt/jshint.json'),
+    csslint: grunt.file.readJSON('grunt/csslint.json'),
     // Watch for changes
     watch: grunt.file.readJSON('grunt/watch.json'),
 
@@ -36,8 +40,11 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-csslint');
+  grunt.loadNpmTasks('grunt-contrib-jshint');
 
   grunt.registerTask('minify', ['cssmin', 'uglify', 'htmlmin', 'imagemin']);
+  grunt.registerTask('lint', ['csslint','jshint']);
   
   grunt.registerTask('debug', ['clean:debug', 'jekyll:serve']);
   grunt.registerTask('stage', ['clean:css', 'sass', 'clean:staging', 'jekyll:stage'])
