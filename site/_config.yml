@@ -3,6 +3,8 @@ pygments: false
 lsi: false
 timezone: Europe/London
 
+authority: http://www.oxfordragball.co.uk
+
 google:
   profile_url: https://plus.google.com/113578026960133800736
   organisation: true
