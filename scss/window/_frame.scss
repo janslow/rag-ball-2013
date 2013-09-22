@@ -18,15 +18,15 @@ $bottom-corner-width: 59px;
     &.left {
       width:$top-corner-width;
       left: -1 * $top-corner-width;
-      background-image: url(../img/frame-top-left.png);
+      background-image: url(/img/frame-top-left.png);
     }
     &.center {
-      background-image: url(../img/frame-top.png);
+      background-image: url(/img/frame-top.png);
     }
     &.right {
       width:$top-corner-width;
       right: -1 * $top-corner-width;
-      background-image: url(../img/frame-top-right.png);
+      background-image: url(/img/frame-top-right.png);
     }
   }
   .side {
@@ -34,11 +34,11 @@ $bottom-corner-width: 59px;
     top: $sky-top + 5px;
     bottom: $sky-bottom + 5px;
     &.right {
-      background-image: url(../img/frame-right.png);
+      background-image: url(/img/frame-right.png);
       right: 0;
     }
     &.left {
-      background-image: url(../img/frame-left.png);
+      background-image: url(/img/frame-left.png);
       left: 0;
     }
   }
@@ -48,15 +48,15 @@ $bottom-corner-width: 59px;
     &.left {
       width: $bottom-corner-width;
       left: -1 * $bottom-corner-width;
-      background-image: url(../img/frame-bottom-left.png);
+      background-image: url(/img/frame-bottom-left.png);
     }
     &.center {
-      background-image: url(../img/frame-bottom.png);
+      background-image: url(/img/frame-bottom.png);
     }
     &.right {
       width: $bottom-corner-width;
       right: -1 * $bottom-corner-width;
-      background-image: url(../img/frame-bottom-right.png);
+      background-image: url(/img/frame-bottom-right.png);
     }
   }
   .center {
@@ -116,7 +116,7 @@ $bottom-corner-width: 59px;
     repeat: repeat-x;
     size: cover;
     position: center center;
-    image: url(../img/skyline.png);
+    image: url(/img/skyline.png);
   }
 }
 
@@ -135,7 +135,7 @@ $bottom-corner-width: 59px;
 
   &.initial, &.intermediate {
     background: {
-      image: url(../img/logo.svg);
+      image: url(/img/logo.svg);
       size: contain;
     }
     z-index: 1601;
@@ -159,7 +159,7 @@ $bottom-corner-width: 59px;
     height: 110px;
 
     box-shadow: 0 0 8px 3px darken($background-blue, 10%);
-    background-image: url(../img/logo-frame.svg);
+    background-image: url(/img/logo-frame.svg);
     z-index: 1600;
   }
 }
