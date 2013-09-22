@@ -1,0 +1,6 @@
+{
+  "debug": "<%= site.debug %>",
+  "staging": "<%= site.staging %>",
+  "release": "<%= site.release %>",
+  "css": "<%= site.css %>"
+}

@@ -35,12 +35,7 @@ module.exports = function (grunt) {
     'useminPrepare': grunt.file.readJSON('grunt/useminPrepare.json'),
 
     //Clean destination directories
-    clean: {
-      debug: ['<%= site.debug %>'],
-      staging: ['<%= site.staging %>'],
-      release: ['<%= site.release %>'],
-      css: ['<%= site.css %>']
-    }
+    clean: grunt.file.readJSON('grunt/clean.json')
   });
 
   grunt.loadNpmTasks('grunt-contrib-cssmin');
