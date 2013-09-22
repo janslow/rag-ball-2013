@@ -6,7 +6,7 @@
   <!-- endbuild -->
 
   {% include meta.html %}
-  <title>{{ page.title }} - {{ site.name }}</title>
+  <title>{% unless page.title == "Home" %}{{ page.title }} - {% endunless %}{{ site.name }}</title>
 </head>
 <body>
   <div class="header">
@@ -17,7 +17,7 @@
     {% include menu.html root='/simple' mode='simple' %}
   </div>
 
-  <h2>{{ page.title }}</h2>
+  {% unless page.title == "Home" %}<h2>{{ page.title }}</h2>{% endunless %}
 
   <div class="content">
     {{ content }}
