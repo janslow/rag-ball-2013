@@ -63,7 +63,7 @@ module.exports = function (grunt) {
   grunt.registerTask('debug', ['clean:debug', 'jekyll:serve']);
   grunt.registerTask('stage', ['clean:css', 'sass', 'clean:staging', 'jekyll:stage', 'lint:staging']);
   grunt.registerTask('release', ['stage', 'clean:release', 'copy:release-misc', 'minify', 'lint:release']);
-  grunt.registerTask('deploy', ['gh-pages:deploy']);
+  grunt.registerTask('deploy', ['gh-pages:deploy', 'ftp-deploy:deploy']);
   
   grunt.registerTask('default', ['release']);
 };

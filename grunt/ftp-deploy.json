@@ -1,5 +1,5 @@
 {
-  "build": {
+  "deploy": {
     "auth": {
       "host": "saul.speedpartner.de",
       "port": 21,
