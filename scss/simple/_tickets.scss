@@ -1,0 +1,25 @@
+#tickets {
+  .ticket {
+    text-align: center;
+    a {
+      display: inline-block;
+      margin: 5px;
+      padding: 10px;
+
+      background-color: $green;
+      border-radius: 10px;
+
+      &, &:hover {
+        text-decoration: none;
+      }
+
+      &:hover span {
+        color: $background-blue;
+      }
+    }
+
+    span {
+      vertical-align: middle;
+    }
+  }
+}
