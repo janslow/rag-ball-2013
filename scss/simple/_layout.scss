@@ -1,0 +1,80 @@
+.menu, .footer {
+  font-size: 0;
+  li {
+    display: inline;
+  }
+
+  a {
+    display: inline-block;
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  a, a:visited, li {
+    font-size: 1em;
+  }
+}
+.header {
+  padding: 20px 0 0;
+  // Main Header Logo
+  .logo {
+    text-align: center;
+    a {
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    span {
+      display: inline-block;
+
+      width: 360px;
+      height: 150px;
+
+      background: {
+        repeat: no-repeat;
+        position: center center;
+        image: url(../img/logo.png);
+        size: contain;
+      };
+    }
+  }
+  // Header Navbar
+  .menu {
+    margin: 20px 0;
+    li {
+      font-size: 1.1rem;
+    }
+    a {
+      padding: 5px 2px;
+      margin: 0 4px;
+      width: 119px;
+
+      text-align: center;
+
+      background: $green;
+      border-radius: 7px;
+
+      &, &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+.footer {
+  padding: 50px 0 10px;
+  margin-bottom: 30px;
+
+  text-align: right;
+  li {
+    font-size: 0.75rem;
+
+    &:not(:last-child) {
+      border-right: 1px solid $beige;
+    }
+
+    a {
+      padding: 2px 4px;
+    }
+  }
+}
