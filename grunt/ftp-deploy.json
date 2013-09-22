@@ -1,0 +1,12 @@
+{
+  "build": {
+    "auth": {
+      "host": "saul.speedpartner.de",
+      "port": 21,
+      "authKey": "ragball"
+    },
+    "src": "<%= site.deploy %>",
+    "dest": "/",
+    "exclusions": ["<%= site.deploy %>/**/.DS_Store", "<%= site.deploy %>/CNAME", "<%= site.deploy %>/**/.git"]
+  }
+}

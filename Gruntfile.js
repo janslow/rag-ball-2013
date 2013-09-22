@@ -27,6 +27,9 @@ module.exports = function (grunt) {
     // Deploy release to gh-pages branch
     'gh-pages': grunt.file.readJSON('grunt/gh-pages.json'),
 
+    // Deploy release to gh-pages branch
+    'ftp-deploy': grunt.file.readJSON('grunt/ftp-deploy.json'),
+
     // Update HTML files with minified links
     usemin: grunt.file.readJSON('grunt/usemin.json'),
     'useminPrepare': grunt.file.readJSON('grunt/useminPrepare.json'),
@@ -55,6 +58,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-html-validation');
   grunt.loadNpmTasks('grunt-gh-pages');
   grunt.loadNpmTasks('grunt-usemin');
+  grunt.loadNpmTasks('grunt-ftp-deploy');
 
   grunt.registerTask('minify', ['useminPrepare', 'concat', 'cssmin', 'uglify', 'copy:release-html', 'usemin', 'htmlmin', 'imagemin']);
   grunt.registerTask('lint:staging', ['jshint:staging', 'validation:staging']);
