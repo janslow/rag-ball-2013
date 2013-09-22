@@ -5,8 +5,7 @@
       "repo": "<%= pkg.repository.url %>",
       "branch": "gh-pages",
       "message": "Auto-generated commit - v<%= pkg.version %>",
-      "clone": "<%= site.deploy %>",
-      "tag": "v<%= pkg.version %>"
+      "clone": "<%= site.deploy %>"
     },
     "src": "**"
   }
