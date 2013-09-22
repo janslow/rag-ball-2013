@@ -27,8 +27,17 @@ h2 {
   font-size: 2.5rem;
 }
 
+p {
+  margin: 0 auto;
+  padding: 0.6rem 0;
 
+  width: 60%;
 
+  text-align: justify;
+  font-size: 1.25rem;
 }
 
+strong {
+  font-weight: 600;
+  color: $green;
 }
