@@ -2,6 +2,7 @@ module.exports = function (grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     site: grunt.file.readJSON('grunt/site.json'),
+    banner: "Copyright <%= pkg.author %> 2013 - <%= pkg.homepage %> - v<%= pkg.version %>",
 
     // Compile Jekyll and SCSS
     sass: grunt.file.readJSON('grunt/sass.json'),
@@ -57,10 +58,11 @@ module.exports = function (grunt) {
 
   grunt.registerTask('minify', ['useminPrepare', 'concat', 'cssmin', 'uglify', 'copy:release-html', 'usemin', 'htmlmin', 'imagemin']);
   grunt.registerTask('lint:staging', ['jshint:staging', 'validation:staging']);
+  grunt.registerTask('lint:release', ['jshint:release', 'validation:release']);
   
   grunt.registerTask('debug', ['clean:debug', 'jekyll:serve']);
   grunt.registerTask('stage', ['clean:css', 'sass', 'clean:staging', 'jekyll:stage', 'lint:staging']);
-  grunt.registerTask('release', ['stage', 'clean:release', 'copy:release-misc', 'minify']);
+  grunt.registerTask('release', ['stage', 'clean:release', 'copy:release-misc', 'minify', 'lint:release']);
   grunt.registerTask('deploy', ['gh-pages:deploy']);
   
   grunt.registerTask('default', ['release']);

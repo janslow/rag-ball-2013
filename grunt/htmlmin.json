@@ -8,7 +8,6 @@
     "expand": true,
     "cwd": "<%= site.release %>/",
     "src": ["**/*.html"],
-    "dest": "<%= site.release %>/",
-    "ext": ".html"
+    "dest": "<%= site.release %>/"
   }
 }

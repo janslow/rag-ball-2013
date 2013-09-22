@@ -9,5 +9,8 @@
   },
   "staging": {
     "src": "<%= site.staging %>/js/*.js"
+  },
+  "release": {
+    "src": "<%= site.staging %>/js/*.js"
   }
 }

@@ -1,9 +1,13 @@
 {
   "options": {
-    "path": "temp/html-validation-status.json",
-    "reportpath": "temp/html-validation-report.json"
+    "path": "temp/html-validation/status.json",
+    "reportpath": "temp/html-validation/report.json",
+    "reset": true
   },
   "staging": {
     "src": "<%= site.staging %>/**/*.html"
+  },
+  "release": {
+    "src": "<%= site.release %>/**/*.html"
   }
 }

@@ -1,5 +1,5 @@
 {
   "options": {
-    "banner": "/* Copyright <%= pkg.author %> 2013 - <%= pkg.homepage %> - v<%= pkg.version %> */"
+    "banner": "/* <%= banner %> */"
   }
 }
