@@ -2,6 +2,9 @@
 @import "_reset.scss";
 @import "simple/_committee.scss";
 
+html {
+  font-size: 16px;
+}
 body {
   width: 920px;
 
