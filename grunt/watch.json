@@ -1,6 +1,6 @@
 {
   "scss-shared": {
-    "files": "<%= site.scss %>/_*.scss",
+    "files": ["<%= site.scss %>/_*.scss", "<%= site.sprites %>/**"],
     "tasks": ["sass"]
   },
   "scss-window": {

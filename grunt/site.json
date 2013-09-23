@@ -1,6 +1,7 @@
 {
   "jekyll": "site",
   "scss": "scss",
+  "sprites": "sprites",
   "css": "site/css",
   "debug": "bin/debug",
   "staging": "bin/staging",
