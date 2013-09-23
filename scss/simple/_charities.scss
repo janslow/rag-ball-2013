@@ -1,40 +1,26 @@
+$charities-layout:horizontal;
+$charities-sprite-dimensions:true;
+@import "charities/*.png";
+@include all-charities-sprites;
+
 #charities {
   .charity-image {
     float: right;
     margin: {
-      top: 10px;
-      left: 10px;
-      bottom: 10px;
+      top: 20px;
+      left: 20px;
+      bottom: 20px;
       right: 20%;
     }
+
+    text-align: center;
+
     &, &:hover {
       text-decoration: none;
     }
 
     span {
       display: inline-block;
-      height: 150px;
-      width: 150px;
-
-      background: {
-        repeat: no-repeat;
-        position: center center;
-        size: contain;
-      };
-
-      &.epa {
-        background-image: url(/img/charities/epa.png);
-      }
-      &.sssk {
-        background-image: url(/img/charities/sssk.png);
-      }
-      &.ofb {
-        background-image: url(/img/charities/ofb.png);
-      }
-      &.gwwc {
-        background-image: url(/img/charities/gwwc.png);
-      }
     }
-
   }
 }
