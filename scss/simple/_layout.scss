@@ -62,6 +62,10 @@
       background: $green;
       border-radius: 7px;
 
+      &:hover {
+        color: $background-blue;
+      }
+
       &, &:hover {
         text-decoration: none;
       }

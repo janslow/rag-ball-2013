@@ -135,7 +135,7 @@ $bottom-corner-width: 59px;
 
   &.initial, &.intermediate {
     background: {
-      image: url(/img/logo.svg);
+      image: url(/img/logo.png);
       size: contain;
     }
     z-index: 1601;
@@ -159,7 +159,7 @@ $bottom-corner-width: 59px;
     height: 110px;
 
     box-shadow: 0 0 8px 3px darken($background-blue, 10%);
-    background-image: url(/img/logo-frame.svg);
+    background-image: url(/img/logo-frame.png);
     z-index: 1600;
   }
 }
