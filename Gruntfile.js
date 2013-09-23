@@ -26,6 +26,9 @@ module.exports = function (grunt) {
     // Watch for changes
     watch: grunt.file.readJSON('grunt/watch.json'),
 
+    // Inject Live Reload script in debug mode
+    usebanner: grunt.file.readJSON('grunt/usebanner.json'),
+
     // Deploy release to gh-pages branch
     'gh-pages': grunt.file.readJSON('grunt/gh-pages.json'),
 
@@ -57,6 +60,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-usemin');
   grunt.loadNpmTasks('grunt-ftp-deploy');
   grunt.loadNpmTasks('grunt-svgmin');
+  grunt.loadNpmTasks('grunt-banner');
 
   grunt.registerTask('minify', ['useminPrepare', 'concat', 'cssmin', 'uglify', 'copy:release-html', 'usemin', 'htmlmin', 'imagemin']);
   grunt.registerTask('lint:staging', ['jshint:staging', 'validation:staging']);
