@@ -3,6 +3,7 @@
 @import "simple/_committee.scss";
 @import "simple/_tickets.scss";
 @import "simple/_entz.scss";
+@import "simple/_charities.scss";
 @import "simple/_layout.scss";
 
 html {
@@ -53,4 +54,9 @@ strong {
   &:hover span {
     color: $background-blue;
   }
+}
+
+.clear {
+  height: 0;
+  float: clear;
 }
