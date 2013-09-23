@@ -1,0 +1,8 @@
+{
+  "release": {
+    "expand": true,
+    "cwd": "<%= site.release %>/img",
+    "src": ["**/*.svg"],
+    "dest": "<%= site.release %>/img"
+  }
+}

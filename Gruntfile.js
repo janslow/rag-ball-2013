@@ -13,6 +13,7 @@ module.exports = function (grunt) {
     uglify: grunt.file.readJSON('grunt/uglify.json'),
     htmlmin: grunt.file.readJSON('grunt/htmlmin.json'),
     imagemin: grunt.file.readJSON('grunt/imagemin.json'),
+    svgmin: grunt.file.readJSON('grunt/svgmin.json'),
 
     // Copy files (which don't need minification)
     copy: grunt.file.readJSON('grunt/copy.json'),
@@ -55,6 +56,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-gh-pages');
   grunt.loadNpmTasks('grunt-usemin');
   grunt.loadNpmTasks('grunt-ftp-deploy');
+  grunt.loadNpmTasks('grunt-svgmin');
 
   grunt.registerTask('minify', ['useminPrepare', 'concat', 'cssmin', 'uglify', 'copy:release-html', 'usemin', 'htmlmin', 'imagemin']);
   grunt.registerTask('lint:staging', ['jshint:staging', 'validation:staging']);
