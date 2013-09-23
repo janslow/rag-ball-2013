@@ -1,6 +1,7 @@
 {
   "options": {
-    "bundleExec": true
+    "bundleExec": true,
+    "compass": true
   },
   "window": {
     "src":"<%= site.scss %>/window.scss",

@@ -1,13 +1,19 @@
 GEM
   remote: http://rubygems.org/
   specs:
+    chunky_png (1.2.8)
     classifier (1.3.3)
       fast-stemmer (>= 1.0.0)
     colorator (0.1)
     commander (4.1.5)
       highline (~> 1.6.11)
+    compass (0.12.2)
+      chunky_png (~> 1.2)
+      fssm (>= 0.2.7)
+      sass (~> 3.1)
     directory_watcher (1.4.1)
     fast-stemmer (1.0.2)
+    fssm (0.2.10)
     highline (1.6.19)
     jekyll (1.2.1)
       classifier (~> 1.3)
@@ -22,6 +28,8 @@ GEM
     liquid (2.5.2)
     maruku (0.6.1)
       syntax (>= 1.0.0)
+    oily_png (1.1.0)
+      chunky_png (~> 1.2.7)
     posix-spawn (0.3.6)
     pygments.rb (0.5.2)
       posix-spawn (~> 0.3.6)
@@ -36,5 +44,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  compass (~> 0.12.2)
   jekyll (~> 1.2.1)
+  oily_png (~> 1.1.0)
   sass (~> 3.2.10)
