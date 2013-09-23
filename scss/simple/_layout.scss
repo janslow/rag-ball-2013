@@ -41,14 +41,21 @@
   }
   // Header Navbar
   .menu {
+    $total-width: 918px;
+    $total-links: 7;
+    $outer-width: $total-width / $total-links;
+    $padding-side: 2px;
+    $margin-side: 4px;
+    $inner-width: $outer-width - 2 * ($padding-side + $margin-side);
+
     margin: 20px 0;
     li {
       font-size: 1.1rem;
     }
     a {
-      padding: 5px 2px;
-      margin: 0 4px;
-      width: 119px;
+      padding: 7px $padding-side;
+      margin: 0 $margin-side;
+      width: $inner-width;
 
       text-align: center;
 
