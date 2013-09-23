@@ -2,7 +2,7 @@
   "minify": {
     "expand": true,
     "cwd": "<%= site.staging %>/img",
-    "src": ["*.{png,jpg,gif}"],
+    "src": ["**/*.{png,jpg,gif}"],
     "dest": "<%= site.release %>/img"
   }
 }
