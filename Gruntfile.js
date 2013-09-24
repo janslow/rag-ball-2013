@@ -64,7 +64,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('minify', ['useminPrepare', 'concat', 'cssmin', 'uglify', 'copy:release-html', 'usemin', 'htmlmin', 'imagemin']);
   grunt.registerTask('lint:staging', ['jshint:staging', 'validation:staging']);
-  grunt.registerTask('lint:release', ['jshint:release', 'validation:release']);
+  grunt.registerTask('lint:release', ['jshint:release']);
   
   grunt.registerTask('debug:build', ['jekyll:build', 'usebanner:livereload']);
   grunt.registerTask('debug:serve', ['jekyll:serve']);
