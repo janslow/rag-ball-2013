@@ -19,10 +19,13 @@
       };
     }
 
-    &.large span {
-      width: 100%;
-      max-width: 360px;
-      height: 150px;
+    &.large {
+      text-align: center;
+      span {
+        width: 100%;
+        max-width: 360px;
+        height: 150px;
+      }
     }
     &.small {
       float: right;
