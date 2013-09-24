@@ -1,3 +1,8 @@
+$button-length: 3rem;
+$icon-length: 1.8rem;
+$control-radius: 0.5rem;
+$button-padding: 0.6rem;
+
 @mixin button {
   text-align: center;
   a {
@@ -21,5 +26,75 @@
 
   span {
     vertical-align: middle;
+  }
+}
+
+@mixin icon-button {
+  background-color: $green;
+  display: inline-block;
+
+  vertical-align: middle;
+
+  height: $button-length;
+  width: $button-length;
+
+  border-radius: $button-length / 2;
+  .icon {
+    height: $icon-length;
+    width: $icon-length;
+    margin: ($button-length - $icon-length) / 2;
+
+    background: {
+      repeat: no-repeat;
+      size: cover;
+    }
+
+    display: inline-block;
+  }
+  &:hover .label {
+    color: $blue;
+  }
+}
+
+@mixin labelled-icon-button {
+  a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 0;
+
+    color: white;
+    &:hover {
+      color: $blue;
+    }
+  }
+  .icon-button, .label {
+    position: relative;
+  }
+  .icon-button {
+    @include icon-button;
+    z-index: 1000;
+    border: solid $blue 2px;
+
+    .icon {
+      background-image: url(/img/menu-button.png);
+    }
+  }
+  .label {
+    z-index: -2000;
+    margin: 0;
+    margin-left: - $button-length / 2;
+    padding: {
+      top: $button-padding;
+      left: ($button-length / 2) + $button-padding;
+      right: $button-padding;
+      bottom: $button-padding;
+    }
+
+    border-radius: $control-radius;
+    background-color: $green;
+
+    vertical-align: middle;
+    font-size: 1rem;
+    color: inherit;
   }
 }
