@@ -1,13 +1,25 @@
 <ul id='footer'>
-  {% if include.mode == 'window' %}
-    <li class='simple'><a href='/simple/home'>Not Displaying Correctly?</a></li>
-  {% else %}
+  {% unless page.layout == 'window' %}
     <li class='full'><a href='/'>Full Site</a></li>
-  {% endif %}
+  {% endunless %}
 
-  <li class='accessibility'><a href='/simple/accessibility'>Accessibility</a></li>
+  {% unless page.layout == 'simple' %}
+    <li class='simple'><a href='/simple/home'>
+      {% if page.layout == 'window' %}
+        Not Displaying Correctly?
+      {% else %}
+        Basic Site
+      {% endif %}
+    </a></li>
+  {% endunless %}
 
-  <li class='mobile'><a href='/mobile/home'>Mobile</a></li>
+  {% unless page.layout == 'mobile' %}
+    <li class='accessibility'><a href='/simple/accessibility'>Accessibility</a></li>
+  {% endunless %}
+
+  {% unless page.layout == 'mobile' %}
+    <li class='mobile'><a href='/mobile/home'>Mobile</a></li>
+  {% endunless %}
 
   <li class='cookies'><a href='/simple/cookies'>Cookies</a></li>
   <li class='contact'><a href='/simple/committee'>Contact</a></li>
