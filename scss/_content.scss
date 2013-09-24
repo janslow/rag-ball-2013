@@ -1,0 +1,61 @@
+$charities-layout:horizontal;
+$charities-sprite-dimensions:true;
+@import "charities/*.png";
+@include all-charities-sprites;
+
+#charities {
+  .charity-image {
+    text-align: center;
+    &, &:hover {
+      text-decoration: none;
+    }
+
+    span {
+      display: inline-block;
+    }
+  }
+}
+
+#committee {
+  ul {
+    font-size: 0;
+  }
+  li {
+    padding: 10px;
+    margin: 10px;
+
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .name {
+    color: $green;
+    font-size: 1.5rem;
+    height: 3rem;
+    vertical-align: middle;
+  }
+
+  .role {
+    margin-top: 3px;
+  }
+
+  .email {
+    margin-top: 3px;
+    font-size: 0.8rem;
+  }
+}
+
+#entz {
+  .quote {
+    margin: 20px 0;
+
+    .line {
+      display: block;
+      margin: 0 auto 10px;
+    }
+
+    .open, .close {
+      padding: 0 0.1rem;
+    }
+  }
+}

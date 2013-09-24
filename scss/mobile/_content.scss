@@ -1,0 +1,17 @@
+#charities {
+  .charity-image {
+    display: block;
+    margin: 0.5rem 0;
+  }
+}
+
+#entz .quote {
+  font-size: 1.5rem;
+  .line {
+    .open, .close {
+      font-size: 2.5rem;
+      line-height: 1rem;
+      vertical-align: middle;
+    }
+  }
+}

@@ -1,10 +1,9 @@
 @import "_colours.scss";
 @import "_reset.scss";
 @import "_button.scss";
-@import "simple/_committee.scss";
-@import "simple/_entz.scss";
-@import "simple/_charities.scss";
+@import "_content.scss";
 @import "mobile/_layout.scss";
+@import "mobile/_content.scss";
 
 html {
   font-size: 16px;

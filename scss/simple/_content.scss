@@ -1,0 +1,37 @@
+#charities {
+  .charity-image {
+    float: right;
+    margin: {
+      top: 20px;
+      left: 20px;
+      bottom: 20px;
+      right: 20%;
+    }
+  }
+}
+
+#committee li {
+  display: inline-block;
+  width: 260px;
+}
+
+#entz .quote {
+  font-size: 1.6rem;
+  
+  .line {
+    width: 80%;
+
+    &:nth-child(odd) {
+      text-align: left;
+    }
+    &:nth-child(even) {
+      text-align: right;
+    }
+
+    .open, .close {
+      font-size: 4rem;
+      line-height: 2rem;
+      vertical-align: middle;
+    }
+  }
+}
