@@ -1,5 +1,6 @@
 @import "_colours.scss";
 @import "_reset.scss";
+@import "_button.scss";
 @import "simple/_committee.scss";
 @import "simple/_tickets.scss";
 @import "simple/_entz.scss";
@@ -50,10 +51,8 @@ strong {
   color: $green;
 }
 
-.button {
-  &:hover span {
-    color: $background-blue;
-  }
+.button, #header .navbar li {
+  @include button;
 }
 
 .clear {

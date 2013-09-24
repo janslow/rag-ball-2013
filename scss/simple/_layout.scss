@@ -11,9 +11,6 @@
       text-decoration: none;
     }
   }
-  a, a:visited, li {
-    font-size: 1em;
-  }
 }
 #header {
   padding: 20px 0 0;
@@ -49,25 +46,12 @@
     $inner-width: $outer-width - 2 * ($padding-side + $margin-side);
 
     margin: 20px 0;
-    li {
+    li.navitem {
       font-size: 1.1rem;
-    }
-    a {
-      padding: 7px $padding-side;
-      margin: 0 $margin-side;
-      width: $inner-width;
-
-      text-align: center;
-
-      background: $green;
-      border-radius: 7px;
-
-      &:hover {
-        color: $background-blue;
-      }
-
-      &, &:hover {
-        text-decoration: none;
+      a {
+        padding: 7px $padding-side;
+        margin: 0 $margin-side;
+        width: $inner-width;
       }
     }
   }

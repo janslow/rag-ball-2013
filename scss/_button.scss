@@ -1,0 +1,25 @@
+@mixin button {
+  text-align: center;
+  a {
+    display: inline-block;
+
+    background-color: $green;
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    margin: 5px;
+    padding: 10px;
+
+    &, &:hover {
+    }
+
+    &:hover {
+      color: $background-blue;
+    }
+  }
+
+  span {
+    vertical-align: middle;
+  }
+}
