@@ -14,5 +14,9 @@
   "construction": {
     "src":"<%= site.scss %>/construction.scss",
     "dest":"<%= site.css %>/construction.css"
+  },
+  "mobile": {
+    "src":"<%= site.scss %>/mobile.scss",
+    "dest":"<%= site.css %>/mobile.css"
   }
 }

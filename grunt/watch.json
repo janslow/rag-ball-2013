@@ -15,9 +15,13 @@
     "files": ["<%= site.scss %>/construction.scss", "<%= site.scss %>/construction/**/*.scss"],
     "tasks": ["sass:construction"]
   },
+  "scss-mobile": {
+    "files": ["<%= site.scss %>/mobile.scss", "<%= site.scss %>/mobile/**/*.scss"],
+    "tasks": ["sass:mobile"]
+  },
   "jekyll": {
     "files": "<%= site.jekyll %>/**/*",
-    "tasks": ["jekyll:build"],
+    "tasks": ["debug:build"],
     "options": {
       "livereload": true
     }
