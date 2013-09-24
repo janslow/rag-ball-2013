@@ -11,7 +11,7 @@ html {
     size: 16px;
   }
 }
-.sky, .background > *, .frame, .content, .footer {
+.sky, .background > *, .frame, .content, #footer {
   position: fixed;
   left: 0;
   right: 0;
@@ -49,7 +49,7 @@ html {
   height: 10000px;
   width: 0;
 }
-.footer {
+#footer {
   background: $background-blue;
   bottom: 0;
   margin: auto 0 0 auto;

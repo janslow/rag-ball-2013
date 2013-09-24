@@ -1,4 +1,4 @@
-.menu, .footer {
+#header .navbar, #footer {
   font-size: 0;
   li {
     display: inline;
@@ -15,7 +15,7 @@
     font-size: 1em;
   }
 }
-.header {
+#header {
   padding: 20px 0 0;
   // Main Header Logo
   .logo {
@@ -72,7 +72,7 @@
     }
   }
 }
-.footer {
+#footer {
   padding: 50px 0 10px;
   margin-bottom: 30px;
 
