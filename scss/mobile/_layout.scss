@@ -36,10 +36,29 @@
   }
 }
 #content {
+  margin-bottom: 20px;
   .menu-button {
     text-align: center;
   }
-  margin-bottom: 20px;
+  .navbar, #footer {
+    li a {
+      display: block;
+      padding: 1rem;
+
+      border-top: 1px solid $dark-blue;
+
+      font-size: 1.5rem;
+    }
+    li:last-child a {
+      border-bottom: 1px solid $dark-blue;      
+    }
+  }
+  #footer {
+    margin-top: 3.5rem;
+    li a {
+      font-size: 1rem;
+    }
+  }
 }
 .menu-button {
   @include labelled-icon-button;
