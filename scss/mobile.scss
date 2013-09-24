@@ -45,6 +45,9 @@ strong {
   color: $green;
 }
 
+.center {
+  text-align: center;
+}
 .button {
   @include button;
 }

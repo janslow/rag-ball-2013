@@ -19,21 +19,17 @@
   <div id="header">
 
     {% if isHome or isMenu %}{% assign logoSize = "large" %}{% else %}{% assign logoSize = "small" %}{% endif %}
-    <div class='logo {{ logoSize }}'>
-      <a href='/mobile/home' title='{{ site.name }}'>
-        <span>&nbsp;</span>
-      </a>
-    </div>
+    <a href='/mobile/home' title='{{ site.name }}' class='logo {{ logoSize }}'>
+      <span>&nbsp;</span>
+    </a>
     
     {% unless isHome or isMenu %}
-      <div class='menu-button'>
-        <a href='/mobile/menu'>
-          <span class='icon-button'>
-            <span class='icon menu'>&nbsp;</span>
-          </span>
-          <span class='label'>Menu</span>
-        </a>
-      </div>
+      <a href='/mobile/menu' class='menu-button'>
+        <span class='icon-button'>
+          <span class='icon menu'>&nbsp;</span>
+        </span>
+        <span class='label'>Menu</span>
+      </a>
       <div class='clear'>&nbsp;</div>
     {% endunless %}
   </div>
@@ -46,8 +42,8 @@
     {{ content }}
 
     {% if isHome %}
-      <div class='menu-button'>
-        <a href='/mobile/menu'>
+      <div class='center'>
+        <a href='/mobile/menu' class='menu-button'>
           <span class='icon-button'>
             <span class='icon menu'>&nbsp;</span>
           </span>

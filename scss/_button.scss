@@ -5,25 +5,20 @@ $button-padding: 0.6rem;
 
 @mixin button {
   text-align: center;
-  a {
-    display: inline-block;
+  display: inline-block;
 
-    background-color: $green;
-    border-radius: 10px;
+  background-color: $green;
+  border-radius: 10px;
 
-    text-decoration: none;
+  text-decoration: none;
+  color: white;
 
-    margin: 5px;
-    padding: 10px;
+  margin: 5px;
+  padding: 10px;
 
-    &, &:hover {
-    }
-
-    &:hover {
-      color: $blue;
-    }
+  &:hover {
+    color: $blue;
   }
-
   span {
     vertical-align: middle;
   }
@@ -57,16 +52,15 @@ $button-padding: 0.6rem;
 }
 
 @mixin labelled-icon-button {
-  a {
-    display: inline-block;
-    text-decoration: none;
-    font-size: 0;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 0;
 
-    color: white;
-    &:hover {
-      color: $blue;
-    }
+  color: white;
+  &:hover {
+    color: $blue;
   }
+  
   .icon-button, .label {
     position: relative;
   }
