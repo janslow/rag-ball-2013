@@ -1,0 +1,46 @@
+@import "../_button.scss";
+#header {
+  // Main Header Logo
+  .logo {
+    text-align: center;
+    a {
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    span {
+      display: inline-block;
+
+      background: {
+        repeat: no-repeat;
+        position: center center;
+        image: url(/img/logo.png);
+        size: contain;
+      };
+    }
+
+    &.large span {
+      width: 360px;
+      height: 150px;
+    }
+    &.small {
+      float: right;
+      span {
+        width: 192px;
+        height: 80px;
+      }
+    }
+  }
+  .menu-button {
+    padding-top: 14px;
+  }
+}
+#content {
+  .menu-button {
+    text-align: center;
+  }
+  margin-bottom: 20px;
+}
+.menu-button {
+  @include labelled-icon-button;
+}

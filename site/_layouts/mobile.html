@@ -1,26 +1,61 @@
 <!DOCTYPE html>
+{% assign isHome = false %}{% assign isMenu = false %}
+{% if page.title == "Home" %}{% assign isHome = true %}{% endif %}
+{% if page.title == "Menu" %}{% assign isMenu = true %}{% endif %}
 <html>
 <head>
+  <!-- build:css(bin/staging) /css/mobile.min.css -->
+    <link rel="stylesheet" type="text/css" href="/css/mobile.css">
+  <!-- endbuild -->
+
   {% include meta.html %}
-  <title>{% unless page.title == "Home" %}{{ page.title }} - {% endunless %}{{ site.name }}</title>
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="cleartype" content="on">
+
+  <title>{% unless isHome %}{{ page.title }} - {% endunless %}{{ site.name }}</title>
 </head>
 <body>
-  <div class="header">
-    <div class='logo'>
+  <div id="header">
+
+    {% if isHome or isMenu %}{% assign logoSize = "large" %}{% else %}{% assign logoSize = "small" %}{% endif %}
+    <div class='logo {{ logoSize }}'>
       <a href='/mobile/home' title='{{ site.name }}'>
         <span>&nbsp;</span>
       </a>
     </div>
-
-    {% include menu.html root='/mobile' mode='mobile' %}
+    
+    {% unless isHome or isMenu %}
+      <div class='menu-button'>
+        <a href='/mobile/menu'>
+          <span class='icon-button'>
+            <span class='icon menu'>&nbsp;</span>
+          </span>
+          <span class='label'>Menu</span>
+        </a>
+      </div>
+      <div class='clear'>&nbsp;</div>
+    {% endunless %}
   </div>
 
-  {% unless page.title == "Home" %}<h2>{{ page.title }}</h2>{% endunless %}
+  {% unless isHome or isMenu %}
+    <h2>{{ page.title }}</h2>
+  {% endunless %}
 
-  <div class="content">
+  <div id="content">
     {{ content }}
-  </div>
 
-  {% include footer.html mode='mobile' %}
+    {% if isHome %}
+      <div class='menu-button'>
+        <a href='/mobile/menu'>
+          <span class='icon-button'>
+            <span class='icon menu'>&nbsp;</span>
+          </span>
+          <span class='label'>Menu</span>
+        </a>
+      </div>
+    {% endif %}
+  </div>
 </body>
 </html>
