@@ -12,6 +12,7 @@
   <!-- build:js(bin/staging) /js/mobile.min.js -->
     <script src="/js/mobile.js"></script>
   <!-- endbuild -->
+  {% include analytics.html %}
 
   {% include meta.html %}
   <meta name="HandheldFriendly" content="True">
@@ -57,5 +58,7 @@
       </div>
     {% endif %}
   </div>
+  
+  {% include tracking.html %}
 </body>
 </html>
