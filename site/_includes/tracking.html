@@ -4,8 +4,7 @@ for (var i = 0; i < links.length; i++) {
   links[i].onclick = function (e) {
     var link = e.currentTarget;
     try {
-      console.log("Track Link: " + ((link.dataset && link.dataset.link) || link.href));
-      _gaq.push(['_trackEvent', 'Link' , (link.dataset && link.dataset.link) ? link.dataset.link : link.href]); 
+      _gaq.push(['_trackEvent', 'Link' , ((link.dataset && link.dataset.link) || link.href)); 
     } catch(err){}
 
     if (!(e.metaKey || e.shiftKey || e.altKey || e.ctrlKey)) {
