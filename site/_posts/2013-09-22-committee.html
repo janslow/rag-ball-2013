@@ -5,36 +5,47 @@ committee_members:
   - role:   President
     name:   Selina Badiani
     email:  president.ragball@ousu.org
+    id:     president
   - role:   Vice President (Experience)
     name:   Rosie Gibson
     email:  experience.ragball@ousu.org
+    id:     experience
   - role:   Vice President (Logistics)
     name:   Shyam Thakerar
     email:  logistics.ragball@ousu.org
+    id:     logistics
   - role:   Vice President (Finance)
     name:   Charlotte Ward
     email:  finance.ragball@ousu.org
+    id:     finance
   - role:   Secretary
     name:   Ruth Meredith
     email:  secretary.ragball@ousu.org
+    id:     secretary
   - role:   Catering Officers
     name:   Lizzie Renard and Polly Streather
     email:  catering.ragball@ousu.org
+    id:     food
   - role:   Drinks Officers
     name:   Nichola Finch and Alex Wilson
     email:  drinks.ragball@ousu.org
+    id:     drinks
   - role:   Entz Officers
     name:   Alex Chalk and Josh Laban
     email:  entz.ragball@ousu.org
+    id:     entz
   - role:   Marketing Officers
     name:   Katy Isaac and Charlotte Nixon
     email:  marketing.ragball@ousu.org
+    id:     marketing
   - role:   Sponsorship Officers
     name:   Rachel Drapper and Jodie Spencer
     email:  sponsorship.ragball@ousu.org
+    id:     sponsor
   - role:   Creative Officers
     name:   Iman Ahmedani and Grace Wyld
     email:  creative.ragball@ousu.org
+    id:     creative
 ---
 
 <div id='committee'>
@@ -44,7 +55,7 @@ committee_members:
         <div class='name'>{{ committee_member.name }}</div>
         <div class='role'>{{ committee_member.role }}</div>
         <div class='email'>
-          <a href='mailto:{{ committee_member.email }}'>{{ committee_member.email }}</a>
+          <a href='mailto:{{ committee_member.email }}' data-link="email-{{ committee_member.id }}">{{ committee_member.email }}</a>
         </div>
       </li>
     {% endfor %}
