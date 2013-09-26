@@ -7,6 +7,7 @@ module.exports = function (grunt) {
     // Compile Jekyll and SCSS
     sass: grunt.file.readJSON('grunt/sass.json'),
     jekyll: grunt.file.readJSON('grunt/jekyll.json'),
+    includereplace: grunt.file.readJSON('grunt/includereplace.json'),
 
     // Minify files
     cssmin: grunt.file.readJSON('grunt/cssmin.json'),
@@ -61,12 +62,13 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-ftp-deploy');
   grunt.loadNpmTasks('grunt-svgmin');
   grunt.loadNpmTasks('grunt-banner');
+  grunt.loadNpmTasks('grunt-include-replace');
 
   grunt.registerTask('minify', ['useminPrepare', 'concat', 'cssmin', 'uglify', 'copy:release-html', 'usemin', 'htmlmin', 'imagemin']);
   grunt.registerTask('lint:staging', ['jshint:staging', 'validation:staging']);
   grunt.registerTask('lint:release', ['jshint:release']);
   
-  grunt.registerTask('debug:build', ['jekyll:build', 'usebanner:livereload']);
+  grunt.registerTask('debug:build', ['jekyll:build', 'includereplace:debug', 'usebanner:livereload']);
   grunt.registerTask('debug:serve', ['jekyll:serve']);
   grunt.registerTask('debug', ['debug:build', 'debug:serve']);
   grunt.registerTask('stage', ['clean:css', 'sass', 'clean:staging', 'jekyll:stage', 'lint:staging']);

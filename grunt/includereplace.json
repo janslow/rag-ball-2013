@@ -1,0 +1,11 @@
+{
+  "debug": {
+    "options": {
+      "includesDir": "<%= site.debug %>"
+    },
+    "expand": true,
+    "cwd": "<%= site.debug %>",
+    "src": ["window/index.html"],
+    "dest": "<%= site.debug %>"
+  }
+}

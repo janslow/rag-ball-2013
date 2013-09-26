@@ -6,6 +6,6 @@
     },
     "expand": true,
     "cwd": "<%= site.debug %>",
-    "src": ["**/*.html"]
+    "src": ["**/*.html", "!window-partial/**/*.html"]
   }
 }
