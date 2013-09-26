@@ -1,9 +1,8 @@
-<!DOCTYPE html>
-{% assign isHome = false %}{% assign isMenu = false %}
-{% if page.title == "Home" %}{% assign isHome = true %}{% endif %}
-{% if page.title == "Menu" %}{% assign isMenu = true %}{% endif %}
+<!DOCTYPE html>{% assign isHome = false %}{% assign isMenu = false %}{% if page.title == "Home" %}{% assign isHome = true %}{% endif %}{% if page.title == "Menu" %}{% assign isMenu = true %}{% endif %}
 <html>
 <head>
+  {% include meta.html %}
+
   <!-- build:css(bin/staging) /css/mobile.min.css -->
     <link rel="stylesheet" type="text/css" href="/css/mobile.css">
   <!-- endbuild -->
@@ -13,8 +12,6 @@
     <script src="/js/mobile.js"></script>
   <!-- endbuild -->
   {% include analytics.html %}
-
-  {% include meta.html %}
   <meta name="HandheldFriendly" content="True">
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width, initial-scale=1">

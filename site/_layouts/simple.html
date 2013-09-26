@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+  {% include meta.html %}
+  
   <!-- build:css(bin/staging) /css/simple.min.css -->
     <link rel="stylesheet" type="text/css" href="/css/simple.css">
   <!-- endbuild -->
   
   {% include analytics.html %}
-  {% include meta.html %}
   <title>{% unless page.title == "Home" %}{{ page.title }} - {% endunless %}{{ site.name }}</title>
 </head>
 <body>
