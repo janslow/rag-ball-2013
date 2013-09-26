@@ -1,4 +1,4 @@
 <div class='{{ page.name }} page' data-menu='{{ page.name }}'>
-  <h2>{{ page.title }}</h2>
+  {% unless page.title == 'Home' %}<h2>{{ page.title }}</h2>{% endunless %}
   {{ content }}
 </div>
