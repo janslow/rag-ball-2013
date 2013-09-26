@@ -3,21 +3,22 @@
   "use strict";
   var header, button, logoSpan;
   function resize() {
-    var totalWidth = header.width(),
-      buttonWidth = button.width(),
+    var totalWidth = header.offsetWidth,
+      buttonWidth = button.offsetWidth,
       freeWidth = totalWidth - buttonWidth - 1;
 
-    logoSpan.width(freeWidth);
+    logoSpan.style.width = freeWidth + "px";
   }
-  $(function () {
-    header = $("#header");
-    button = $(".menu-button", header);
-    logoSpan = $(".logo.small span", header);
+  window.onload = function () {
+    header = document.getElementById("header");
+    button = header.querySelector(".menu-button");
+    logoSpan = header.querySelector(".logo.small span");
 
-    if (button.length) {
-      $(window).resize(resize).resize();
+    if (button) {
+      window.onresize = resize;
+      window.onresize();
     } else {
       header = button = logoSpan = undefined;
     }
-  });
+  };
 }());
