@@ -9,8 +9,10 @@ $bottom-corner-width: 59px;
   top: 0;
   bottom: 0;
   min-height: 100px + $frame-top-height + $frame-bottom-height + $frame-menu-height;
+  pointer-events: none;
   & > * {
     position: absolute;
+    pointer-events: auto;
   }
   .top {
     height: $frame-top-height;
@@ -111,6 +113,8 @@ $bottom-corner-width: 59px;
   bottom: $sky-bottom + $frame-menu-height - 1;
 
   height: 100px;
+
+  pointer-events: none;
   
   background: {
     repeat: repeat-x;
