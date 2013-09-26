@@ -1,3 +1,5 @@
+@import "_button.scss";
+
 $charities-layout:horizontal;
 $charities-sprite-dimensions:true;
 @import "charities/*.png";
@@ -57,5 +59,14 @@ $charities-sprite-dimensions:true;
     .open, .close {
       padding: 0 0.1rem;
     }
+  }
+}
+
+#tickets {
+  .center {
+    text-align: center;
+  }
+  .button {
+    @include button;
   }
 }
