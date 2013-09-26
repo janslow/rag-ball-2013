@@ -12,6 +12,8 @@ $bottom-corner-width: 59px;
   pointer-events: none;
   & > * {
     position: absolute;
+  }
+  a, .menu {
     pointer-events: auto;
   }
   .top {
@@ -165,5 +167,10 @@ $bottom-corner-width: 59px;
     box-shadow: 0 0 8px 3px darken($blue, 10%);
     background-image: url(/img/logo-frame.png);
     z-index: 1600;
+
+    a {
+      display: block;
+      height: 100%;
+    }
   }
 }
