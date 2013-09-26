@@ -1,34 +1,108 @@
 @import "../_colours.scss";
 
-.content {
-  .title {
-    height: 800px;
+#content {
+  h2, h3 {
+    text-align: center;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+  p {
+    margin: 1rem auto;
+
+    width: 70%;
+
+    font-size: 1.6rem;
+    text-align: justify;
+  }
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  strong {
+    font-weight: 600;
+    color: $green;
   }
 
-  .quote {
-    margin-top: 100px;
-    height: 700px;
-    width: 450px;
-    margin-left: auto;
-    margin-right: auto;
+  .page {
+    margin-bottom: 600px;
+    &.title {
+      height: 300px;
+    }
 
-    .line1, .line2, .line3 {
-    	color: $beige;
-    	font-size: 1.875rem;
-    	margin-bottom: 20px;
+    &.quote {
+      margin-top: 100px;
+      // height: 700px;
+      width: 450px;
+      margin-left: auto;
+      margin-right: auto;
+
+      .line1, .line2, .line3 {
+        color: $beige;
+        font-size: 1.875rem;
+        margin-bottom: 20px;
+      }
+      .line1 {
+        text-align: center;
+        margin-right: 50px;
+      }
+      .line2 {
+        text-align: right;
+      }
+      .author {
+        color: $beige;
+        font-size: 1.25rem;
+        text-align: right;
+        margin-right: 20px;
+      }
     }
-    .line1 {
-    	text-align: center;
-    	margin-right: 50px;
+
+    &.entz {
+      .quote {
+        margin: 3rem auto;
+
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+        
+        .line {
+          width: 80%;
+
+          &:nth-child(odd) {
+            text-align: left;
+          }
+          &:nth-child(even) {
+            text-align: right;
+          }
+
+          .open, .close {
+            font-size: 4rem;
+            line-height: 2rem;
+            vertical-align: middle;
+          }
+        }
+      }
     }
-    .line2 {
-    	text-align: right;
+
+    &.tickets {
+      .button {
+        font-size: 1.6rem;
+      }
     }
-    .author {
-    	color: $beige;
-    	font-size: 1.25rem;
-    	text-align: right;
-    	margin-right: 20px;
+
+    &.charities {
+      .charity-image {
+        float: right;
+        margin: {
+          top: 20px;
+          left: 20px;
+          bottom: 20px;
+          right: 20%;
+        }
+      }
     }
   }
 }
