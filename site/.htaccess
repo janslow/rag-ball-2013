@@ -3,6 +3,10 @@ AddType image/svg+xml svg
 <IfModule mod_rewrite.c>
   RewriteEngine on
 
+  # Disable under-construction page
+  # RewriteCond %{REQUEST_URI} ^/?$ [NC]
+  # RewriteRule .* window/
+
   # Store version cookie
   RewriteCond %{QUERY_STRING} version=(mobile|simple|window) [NC]
   RewriteRule .* %{REQUEST_URI}? [R=302,CO=version:%1:.oxfordragball.co.uk:10080:/,L]
