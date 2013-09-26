@@ -20,7 +20,8 @@
     }
 
     &.large {
-      text-align: center;
+      display: block;
+      margin: 0 auto;
       span {
         width: 100%;
         max-width: 360px;
