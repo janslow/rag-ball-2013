@@ -25,6 +25,8 @@ module Jekyll
       # Declare the unique permalink for this instance
       title = CGI.escape(slug)
       self.data["permalink"] = "/#{layout}/#{title}"
+      
+      self.data["name"] = title
 
       if self.data.has_key?('date')
         self.date = Time.parse(self.data["date"].to_s)
