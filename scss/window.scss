@@ -11,16 +11,16 @@ html {
     size: 16px;
   }
 }
-.sky, .background > *, .frame, .content, #footer {
+.sky, .background > *, .frame, #content, #footer {
   position: fixed;
   left: 0;
   right: 0;
 }
-.sky, .content, .frame {
+.sky, #content, .frame {
   margin-left: auto;
   margin-right: auto;
 }
-.sky, .content {
+.sky, #content {
   top: $sky-top;
 }
 .sky {

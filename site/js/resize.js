@@ -15,7 +15,7 @@
     itemWidth = (skyWidth / menuItemsCount) - 32;
 
     $('.frame').width(frameWidth);
-    $('.sky, .content').width(skyWidth);
+    $('.sky, #content').width(skyWidth);
     $('.menu a').width(itemWidth);
 
     $(window).scroll();

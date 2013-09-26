@@ -97,7 +97,7 @@
 
   $(function () {
     sky = $('body > .sky');
-    content = $('body > .content');
+    content = $('#content');
     contentOffset = sky.position().top;
     logo = {
       initial: $('body > .frame > .logo.initial'),

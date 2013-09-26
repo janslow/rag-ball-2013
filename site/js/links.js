@@ -14,7 +14,7 @@
   
   $(function () {
     //Get all page positions
-    $('.content > .page').each(function (i, e) {
+    $('#content > .page').each(function (i, e) {
       var $e = $(e);
       if ($e.data('menu') !== undefined) {
         links[$e.data('menu')] = $e.position().top;
