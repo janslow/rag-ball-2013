@@ -1,0 +1,71 @@
+AddType image/svg+xml svg
+
+<IfModule mod_rewrite.c>
+  RewriteEngine on
+
+  # Store version cookie
+  RewriteCond %{QUERY_STRING} version=(mobile|simple|window) [NC]
+  RewriteRule .* %{REQUEST_URI}? [R=302,CO=version:%1:.oxfordragball.co.uk:10080:/,L]
+
+  # Unless version is already set
+  RewriteCond %{HTTP_COOKIE} version=(window|simple|mobile) [NC]
+  RewriteRule .* - [S=12]
+    # If mobile device, set version=mobile and redirect to mobile
+    RewriteCond %{HTTP_USER_AGENT} !android|blackberry|ip(hone|od|ad)|kindle|windows.phone|iemobile [NC]
+    RewriteRule .* - [S=4]
+      RewriteRule .* - [CO=version:mobile:.oxfordragball.co.uk:10080:/]
+      RewriteRule ^/?(window|simple)/(.*[^/])/?$ /mobile/$2/ [R=302,L]
+      RewriteRule ^/?(window|simple) /mobile/home/ [R=302,L]
+      RewriteRule .* - [S=7]
+    # Else if IE, set version=simple and redirect to simple
+    RewriteCond %{HTTP_USER_AGENT} !msie [NC]
+    RewriteRule .* - [S=4]
+      RewriteRule .* - [CO=version:simple:.oxfordragball.co.uk:10080:/]
+      RewriteRule ^/?(window|mobile)/(.*[^/])/? /simple/$2/ [R=302,L]
+      RewriteRule ^/?(window|mobile) /simple/home/ [R=302,L]
+      RewriteRule .* - [S=2]
+    # Else, set version=window and redirect to window
+    RewriteRule .* - [CO=version:window:.oxfordragball.co.uk:10080:/]
+    RewriteRule ^/?(simple|mobile) /window/ [R=302,L]
+  # End Unless
+
+  # version is now set
+
+  # If version is window
+  RewriteCond %{HTTP_COOKIE} !version=window [NC]
+  RewriteRule .* - [S=1]
+    # If url is a simple or mobile view, redirect to window view
+    RewriteRule ^/?(simple|mobile) /window/ [R=302]
+  # End If
+
+  # If version is simple
+  RewriteCond %{HTTP_COOKIE} !version=simple [NC]
+  RewriteRule .* - [S=2]
+    # If url is a simple or mobile view, redirect to simple view
+    RewriteRule ^/?(window|mobile)/(.*[^/])/? /simple/$2/ [R=302,L]
+    RewriteRule ^/?(window|mobile) /simple/home/ [R=302,L]
+  # End If
+
+  # If version is mobile
+  RewriteCond %{HTTP_COOKIE} !version=mobile [NC]
+  RewriteRule .* - [S=2]
+    # If url is a mobile or mobile view, redirect to mobile view
+    RewriteRule ^/?(window|simple)/(.*[^/])/? /mobile/$2/ [R=302,L]
+    RewriteRule ^/?(window|simple) /mobile/home/ [R=302,L]
+  # End If
+</IfModule>
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ############################################
+  ## Add default Expires header
+  ## http://developer.yahoo.com/performance/rules.html#expires
+  <FilesMatch "\.(ico|jpg|png|gif)$">
+    ExpiresDefault "access plus 1 month"
+  </FilesMatch>
+  <FilesMatch "\.(js|css)$">
+    ExpiresDefault "access plus 1 day"
+  </FilesMatch>
+  <FilesMatch "\.(html)$">
+    ExpiresDefault "access plus 1 day"
+  </FilesMatch>
+</IfModule>

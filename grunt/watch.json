@@ -20,7 +20,7 @@
     "tasks": ["sass:mobile"]
   },
   "jekyll": {
-    "files": "<%= site.jekyll %>/**/*",
+    "files": ["<%= site.jekyll %>/**/*", "<%= site.jekyll %>/.htaccess"],
     "tasks": ["debug:build"],
     "options": {
       "livereload": true
