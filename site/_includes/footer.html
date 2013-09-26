@@ -1,10 +1,10 @@
 <ul id='footer'>
   {% unless page.layout == 'window' %}
-    <li class='window'><a href='/window' data-link='footer-full'>Full Site</a></li>
+    <li class='window'><a href='/window?version=window' data-link='footer-full'>Full Site</a></li>
   {% endunless %}
 
   {% unless page.layout == 'simple' %}
-    <li class='simple'><a href='/simple/home' data-link='footer-simple'>
+    <li class='simple'><a href='/simple/home?version=simple' data-link='footer-simple'>
       {% if page.layout == 'window' %}
         Not Displaying Correctly?
       {% else %}
@@ -18,7 +18,7 @@
   {% endunless %}
 
   {% unless page.layout == 'mobile' %}
-    <li class='mobile'><a href='/mobile/home' data-link='footer-mobile'>Mobile</a></li>
+    <li class='mobile'><a href='/mobile/home?version=mobile' data-link='footer-mobile'>Mobile</a></li>
   {% endunless %}
 
   <li class='cookies'><a href='/simple/cookies' data-link='footer-cookies'>Cookies</a></li>
