@@ -17,15 +17,17 @@
     $('#content > .page').each(function (i, e) {
       var $e = $(e);
       if ($e.data('menu') !== undefined) {
-        links['#' + $e.data('menu')] = $e.position().top - 100;
+        links[$e.data('menu')] = $e.position().top - 100;
       }
     });
-    //Add OnHashChange handler
-    $(window).on('hashchange', function () {
-      var hash = window.location.hash;
-      if (links[hash] !== undefined) {
-        scrollToY(links[hash]);
+    // Attach handler to all .location elements
+    $('.location').click(function (e) {
+      var page = e.currentTarget && e.currentTarget.dataset.menu,
+        position = page && links[page];
+      if (position) {
+        scrollToY(position);
       }
-    }).trigger('hashchange');
+      e.preventDefault();
+    });
   });
 }());
