@@ -2,6 +2,7 @@
 (function () {
   "use strict";
   var contentOffset, sky, content, logo,
+    prevScrollY = 0,
     colours = ["#ecf4f8", "#e3eef5", "#b0d0e3", "#6cacca", "#328fb1", "#2b7aa3", "#29719c", "#276693", "#25618e", "#235987", "#21507e", "#1e4471", "#1c3c66", "#193259"],
     colourPercents = [0, 2, 9, 14, 18, 24, 27, 31, 34, 39, 47, 59, 70, 84];
 
@@ -107,9 +108,12 @@
 
     $(window).scroll(function () {
       var progress = $(window).scrollTop();
-      updateGradient(progress / 40);
-      updateContent(progress);
-      updateLogo(progress);
+      if (progress != 0 || Math.abs(prevScrollY - progress) < 200) {
+        updateGradient(progress / 40);
+        updateContent(progress);
+        updateLogo(progress);
+      }
+      prevScrollY = progress;
     }).scroll();
   });
 }());
