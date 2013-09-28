@@ -36,6 +36,7 @@
       var popup = e.currentTarget && e.currentTarget.dataset.popup;
       popup = $('#popups .' + popup);
       if (popup.length) {
+        $("#popups > iframe").not(popup).hide();
         popup.add('#popups, #popup-blur').show();
       }
     });
