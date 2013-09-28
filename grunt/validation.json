@@ -5,9 +5,6 @@
     "reset": true
   },
   "staging": {
-    "src": "<%= site.staging %>/**/*.html"
-  },
-  "release": {
-    "src": "<%= site.release %>/**/*.html"
+    "src": ["<%= site.staging %>/**/*.html", "!<%= site.staging %>/window-partial/**/*.html"]
   }
 }

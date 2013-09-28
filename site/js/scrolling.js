@@ -1,4 +1,4 @@
-/*global $:false */
+/*global $:false, Math:false */
 (function () {
   "use strict";
   var contentOffset, sky, content, logo,
@@ -108,7 +108,7 @@
 
     $(window).scroll(function () {
       var progress = $(window).scrollTop();
-      if (progress != 0 || Math.abs(prevScrollY - progress) < 200) {
+      if (progress !== 0 || Math.abs(prevScrollY - progress) < 200) {
         updateGradient(progress / 40);
         updateContent(progress);
         updateLogo(progress);
