@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {% include meta.html %}
+  
+
+  <!-- build:css(bin/staging) /css/mobile.min.css -->
+    <link rel="stylesheet" type="text/css" href="/css/mobile.css">
+  <!-- endbuild -->
+  
+  {% include analytics.html %}
+  <title>{% unless page.title == "Home" %}{{ page.title }} - {% endunless %}{{ site.name }}</title>
+</head>
+<body>
+  <div id='header'>&nbsp;</div>
+
+  {% unless page.title == "Home" %}<h2>{{ page.title }}</h2>{% endunless %}
+
+  <div id="content">
+    {{ content }}
+  </div>
+  
+  {% include tracking.html %}
+</body>
+</html>
