@@ -21,8 +21,24 @@
     <li class='mobile'><a href='/mobile/home?version=mobile' data-link='footer-mobile'>Mobile</a></li>
   {% endunless %}
 
-  <li class='cookies'><a href='/simple/cookies' data-link='footer-cookies'>Cookies</a></li>
-  <li class='contact'><a href='/simple/committee' data-link='footer-committee'>Contact</a></li>
+  <li class='cookies'>
+    {% if page.layout == 'window' %}
+      <a href='#' class='popup' data-popup='cookies'>
+    {% else %}
+      <a href='/simple/cookies' data-link='footer-cookies'>
+    {% endif %}
+      Cookies
+    </a>
+  </li>
+  <li class='contact'>
+    {% if page.layout == 'window' %}
+      <a href='#' class='popup' data-popup='committee'>
+    {% else %}
+      <a href='/simple/committee' data-link='footer-committee'>
+    {% endif %}
+      Contact
+    </a>
+  </li>
 
   <li class='copyright'>{% include copyright.html %}</li>
 </ul>
