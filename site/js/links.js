@@ -29,5 +29,15 @@
       }
       e.preventDefault();
     });
+    $('#popup-blur').click(function (e) {
+      $('#popup-blur, #popups > iframe').hide();
+    })
+    $('a.popup').click(function (e) {
+      var popup = e.currentTarget && e.currentTarget.dataset.popup;
+      popup = $('#popups .' + popup);
+      if (popup.length) {
+        popup.add('#popups, #popup-blur').show();
+      }
+    })
   });
 }());
