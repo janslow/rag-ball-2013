@@ -15,7 +15,7 @@ $sky-width: $frame-width - (2 * $frame-side-width);
 .frame {
   width: $frame-width;
   .menu a {
-    width: ($sky-width / $menu-item-count) - 32px;
+    width: ($sky-width / $menu-item-count) - 12px;
   }
 }
 .sky, .content {

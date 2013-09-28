@@ -12,7 +12,7 @@
       frameWidth = 540;
     }
     skyWidth = frameWidth - 40;
-    itemWidth = (skyWidth / menuItemsCount) - 32;
+    itemWidth = (skyWidth / menuItemsCount) - 12;
 
     $('.frame').width(frameWidth);
     $('.sky, #content').width(skyWidth);
