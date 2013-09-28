@@ -5,6 +5,7 @@
 @import "window/_frame.scss";
 @import "window/_content.scss";
 @import "window/_dynamic.scss";
+@import "window/_popups.scss";
 
 html {
   font: {
@@ -12,7 +13,7 @@ html {
     size: 16px;
   }
 }
-.sky, .background > *, .frame, #content, #footer {
+.sky, .background > *, .frame, #content, #footer, #popups, #popup-blur {
   position: fixed;
   left: 0;
   right: 0;
