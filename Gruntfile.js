@@ -71,7 +71,7 @@ module.exports = function (grunt) {
   grunt.registerTask('debug:build', ['jekyll:build', 'includereplace:debug', 'usebanner:livereload']);
   grunt.registerTask('debug:serve', ['jekyll:serve']);
   grunt.registerTask('debug', ['debug:build', 'debug:serve']);
-  grunt.registerTask('stage', ['clean:css', 'sass', 'clean:staging', 'jekyll:stage', 'lint:staging']);
+  grunt.registerTask('stage', ['clean:css', 'sass', 'clean:staging', 'jekyll:stage', 'includereplace:staging', 'lint:staging']);
   grunt.registerTask('release', ['stage', 'clean:release', 'copy:release-misc', 'minify', 'lint:release']);
   grunt.registerTask('deploy', ['gh-pages:deploy', 'ftp-deploy:deploy']);
   

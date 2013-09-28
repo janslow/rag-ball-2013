@@ -7,5 +7,14 @@
     "cwd": "<%= site.debug %>",
     "src": ["window/index.html"],
     "dest": "<%= site.debug %>"
+  },
+  "staging": {
+    "options": {
+      "includesDir": "<%= site.staging %>"
+    },
+    "expand": true,
+    "cwd": "<%= site.staging %>",
+    "src": ["window/index.html"],
+    "dest": "<%= site.staging %>"
   }
 }
