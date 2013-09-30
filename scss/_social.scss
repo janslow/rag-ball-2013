@@ -1,0 +1,21 @@
+$social-layout:horizontal;
+@import "social/*.png";
+@include all-social-sprites;
+
+#social {
+  li {
+    display: inline;
+  }
+
+  a {
+    display: inline-block;
+    margin: 2px 4px;
+
+    height: 32px;
+    width: 32px;
+    
+    &, &:hover {
+      text-decoration: none;
+    }
+  }
+}

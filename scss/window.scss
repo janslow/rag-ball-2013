@@ -1,6 +1,7 @@
 @import "_colours.scss";
 @import "_reset.scss";
 @import "_content.scss";
+@import "_social.scss";
 @import "window/_shared.scss";
 @import "window/_frame.scss";
 @import "window/_content.scss";
@@ -13,7 +14,7 @@ html {
     size: 16px;
   }
 }
-.sky, .background > *, .frame, #content, #footer, #popups, #popup-blur {
+.sky, .background > *, .frame, #content, #footer, #social, #popups, #popup-blur {
   position: fixed;
   left: 0;
   right: 0;
@@ -51,35 +52,62 @@ html {
   height: 11000px;
   width: 0;
 }
-#footer {
+#footer, #social {
   background: $blue;
   bottom: 0;
-  margin: auto 0 0 auto;
-  padding: 5px 10px 5px 5px;
+
+  margin: {
+    top: auto;
+    bottom: 0;
+  }
+  padding: 5px;
+
+  font-size: 0;
+
+  li {
+    display: inline;
+  }
+
+  a {
+    display: inline-block;
+    margin: 2px 4px;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+#footer {
+  margin: {
+    left: auto;
+    right: 0;
+  }
+  padding-right: 10px;
   width: 29rem;
   z-index: 1999;
   text-align: right;
   border-top-left-radius: 5px;
 
-  font-size: 0;
-  
   li {
-    display: inline;
-
     &:not(:last-child) {
       border-right: 1px solid $beige;
-    }
-  }
-
-  a {
-    display: inline-block;
-    padding: 2px 4px;
-    &:hover {
-      text-decoration: none;
     }
   }
   a, a:visited, li {
     color: $beige;
     font-size: 0.75rem;
   }
+}
+#social {
+  margin: {
+    left: 0;
+    right: auto;
+  }
+  padding-left: 10px;
+  width: 5rem;
+  z-index: 1998;
+
+  text-align: left;
+  border-top-right-radius: 5px;
+
+
 }

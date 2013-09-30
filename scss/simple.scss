@@ -2,6 +2,7 @@
 @import "_reset.scss";
 @import "_button.scss";
 @import "_content.scss";
+@import "_social.scss";
 @import "simple/_content.scss";
 @import "simple/_layout.scss";
 @import "simple/_shared.scss";
@@ -10,6 +11,7 @@ html {
   font-size: $root-font-size;
 }
 body {
+  position: relative;
   width: 920px;
 
   padding: 0 20px;
