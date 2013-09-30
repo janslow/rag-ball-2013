@@ -47,7 +47,7 @@
 
     margin: 20px 0;
     li.navitem {
-      font-size: 1.1rem;
+      font-size: calculatePx(1.1rem);
       a {
         padding: 7px $padding-side;
         margin: 0 $margin-side;
@@ -62,7 +62,7 @@
 
   text-align: right;
   li {
-    font-size: 0.75rem;
+    font-size: calculatePx(0.75rem);
 
     &:not(:last-child) {
       border-right: 1px solid $beige;

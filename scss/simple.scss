@@ -4,9 +4,10 @@
 @import "_content.scss";
 @import "simple/_content.scss";
 @import "simple/_layout.scss";
+@import "simple/_shared.scss";
 
 html {
-  font-size: 16px;
+  font-size: $root-font-size;
 }
 body {
   width: 920px;
@@ -26,22 +27,22 @@ a {
 
 h2 {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: calculatePx(2.5rem);
 }
 h3 {
-  margin: 1rem auto 0;
+  margin: calculatePx(1rem) auto 0;
   text-align: center;
-  font-size: 1.75rem;
+  font-size: calculatePx(1.75rem);
 }
 
 p {
   margin: 0 auto;
-  padding: 0.6rem 0;
+  padding: calculatePx(0.6rem) 0;
 
   width: 60%;
 
   text-align: justify;
-  font-size: 1.25rem;
+  font-size: calculatePx(1.25rem);
 }
 
 strong {

@@ -1,0 +1,10 @@
+$root-font-size: 16px;
+
+@function strip-units($number) {
+  @return $number / ($number * 0 + 1);
+}
+
+@function calculatePx($rem) {
+  $pxSize: strip-units($rem);
+  @return $pxSize * $root-font-size;
+}
