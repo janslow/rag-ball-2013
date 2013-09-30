@@ -30,7 +30,7 @@
       e.preventDefault();
     });
     $('#popup-blur').click(function (e) {
-      $('#popup-blur, #popups > iframe').hide();
+      $('#popup-blur, #popups, #popups > iframe').hide();
     });
     $('a.popup').click(function (e) {
       var popup = e.currentTarget && e.currentTarget.dataset.popup;
