@@ -12,7 +12,7 @@ for (var i = 0; i < links.length; i++) {
       _gaq.push(['_trackEvent', 'Link' , ((link.dataset && link.dataset.link) || link.href)]); 
     } catch(err){}
 
-    if (!(e.metaKey || e.shiftKey || e.altKey || e.ctrlKey) && (!link.attributes.target || link.attributes.target == '_self') {
+    if (!(e.metaKey || e.shiftKey || e.altKey || e.ctrlKey) && (!link.attributes.target || link.attributes.target == '_self')) {
       setTimeout(function() {
         document.location.href = link.href;
       }, 100);
