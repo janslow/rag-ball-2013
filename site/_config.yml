@@ -5,9 +5,9 @@ timezone: Europe/London
 
 authority: http://www.oxfordragball.co.uk
 
-google:
-  profile_url: https://plus.google.com/113578026960133800736
-  organisation: true
+# google:
+#   profile_url: https://plus.google.com/113578026960133800736
+#   organisation: true
 fb: https://www.facebook.com/oxfordragball
 twitter:  https://twitter.com/oxfordragball
 
