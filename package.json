@@ -1,6 +1,6 @@
 {
   "name": "rag-ball-2013",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Website for Rag Ball 2013",
   "homepage": "https://github.com/janslow/rag-ball-2013",
   "main": "Gruntfile.js",
