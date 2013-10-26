@@ -4,8 +4,8 @@ AddType image/svg+xml svg
   RewriteEngine on
 
   # Disable under-construction page
-  # RewriteCond %{REQUEST_URI} ^/?$ [NC]
-  # RewriteRule .* window/
+  RewriteCond %{REQUEST_URI} ^/?$ [NC]
+  RewriteRule .* window/
 
   # Store version cookie
   RewriteCond %{QUERY_STRING} version=(mobile|simple|window) [NC]
@@ -63,7 +63,7 @@ AddType image/svg+xml svg
   ############################################
   ## Add default Expires header
   ## http://developer.yahoo.com/performance/rules.html#expires
-  <FilesMatch "\.(ico|jpg|png|gif)$">
+  <FilesMatch "\.(ico|jpg|png|gif|mp3)$">
     ExpiresDefault "access plus 1 month"
   </FilesMatch>
   <FilesMatch "\.(js|css)$">
